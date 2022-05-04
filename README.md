@@ -5,7 +5,7 @@ More details can be found out in this FlexPodXCS white papter -
 
 https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/flexpod-xcs-solution-with-intersight-wp.html
 
-Uber work-flow can be imported to your Intersight account using Import feature in Orchestration menu. Intersight account must have premier license installed in order to enable Intersight Cloud Orchestrator feature set. Importing uber work-flow alone, imports all sub-workflows, custom tasks, config tasks and validation tasks all together. There is no other requirement needed to run the work-flow except giving required inputs during the work-flow execution. 
+Uber work-flow can be imported to your Intersight account using Import feature in Orchestration menu. Intersight account must have premier license installed in order to enable Intersight Cloud Orchestrator feature set. Importing uber work-flow alone, imports all sub-workflows, custom tasks, config tasks, parallel loop tasks, conditional tasks and validation tasks all together. There is no other requirement needed to run the work-flow except giving required inputs during the work-flow execution. 
 
 <img width="1511" alt="Screen Shot 2022-05-04 at 4 20 16 PM" src="https://user-images.githubusercontent.com/12057795/166840700-5e0344bf-ca77-4fd7-9271-711e31042867.png">
 
