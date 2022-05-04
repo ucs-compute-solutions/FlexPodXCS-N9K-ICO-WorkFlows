@@ -15,7 +15,9 @@ Uber work-flow for configuring N9k devices for FlexPod based on CVD best practic
 <img width="684" alt="Screen Shot 2022-05-04 at 3 42 39 PM" src="https://user-images.githubusercontent.com/12057795/166837272-f3b9ec59-a028-4da4-a35a-e5c7feb02931.png">
 
 Sub-workflow for enabling features:
+
 Following features will be enabled through this sub-workflow -
+
 enabled_features:
   - lacp
   - vpc
@@ -27,7 +29,9 @@ enabled_features:
   <img width="604" alt="Screen Shot 2022-05-04 at 3 44 31 PM" src="https://user-images.githubusercontent.com/12057795/166837410-07d69720-ecef-4b49-a387-07d0e5ae1bfa.png">
 
 Sub-workflow for global settings:
-Following global setting get configured by this sub-workflow -
+
+Following STP & LB settings get configured by this sub-workflow -
+
 global_settings:
   - spanning-tree port type network default
   - spanning-tree port type edge bpduguard default
@@ -41,6 +45,10 @@ global_settings:
   Sub-workflow for vLAN configuration:
 
   <img width="641" alt="Screen Shot 2022-05-04 at 3 45 27 PM" src="https://user-images.githubusercontent.com/12057795/166837512-c71348ab-9941-49d7-b6c5-513690a85489.png">
+  
+  Sub-workfloe for NTP configuration:
+  
+  <img width="645" alt="Screen Shot 2022-05-04 at 4 42 13 PM" src="https://user-images.githubusercontent.com/12057795/166842448-015a26eb-acd4-4047-aaa5-2b605d04b509.png">
 
   Sub-workflow for vPC configuration:
 
