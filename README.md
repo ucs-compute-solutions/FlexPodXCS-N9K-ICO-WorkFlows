@@ -1,6 +1,6 @@
 # FlexPodXCS-N9K-ICO-WorkFlows
 
-This repository contains canned Intersight Cloud Orchestrator work-flow for configuring a pair of N9K switching devices. Its expected to have physical connections, required hardware model and NXOS versions have already been setup based on FlexPod latest CVD reccomendations. Also these N9K devices have been claimed to your Intersight account using on-prem Intersight Assit running on your on-prem.
+This repository contains canned Intersight Cloud Orchestrator work-flow for configuring a pair of N9K ethernet switching devices required for FlexPod reference architeture. Its expected to have physical connections, required hardware model and NXOS versions have already been setup based on FlexPod latest CVD reccomendations. Also these N9K devices have been claimed to your Intersight account using on-prem Intersight Assit running on your on-prem.
 More details can be found out in this FlexPodXCS white papter - 
 
 https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/flexpod-xcs-solution-with-intersight-wp.html
