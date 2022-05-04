@@ -1,5 +1,12 @@
 # FlexPodXCS-N9K-ICO-WorkFlows
 
+This repository contains canned Intersight Cloud Orchestrator work-flow for configuring a pair of N9K switching devices. Its expected to have physical connections, required hardware model and NXOS versions have already been setup based on FlexPod latest CVD reccomendations. Also these N9K devices have been claimed to your Intersight account using on-prem Intersight Assit running on your on-prem.
+More details can be found out in this FlexPodXCS white papter - 
+
+https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/flexpod-xcs-solution-with-intersight-wp.html
+
+Uber work-flow can be imported to your Intersight account using Import feature in Orchestration menu item. Intersight account must have Premier license installed in order to enable Intersight Cloud Orchestrator feature set. Importing uber work-flow alone imports all sub-workflows, custom tasks, config tasks and validation tasks all together. There is no other requirement needed to run the work-flow except giving required inputs during the work-flow exection. 
+
 Uber work-flow for configuring N9k devices for FlexPod based on CVD best practices -
 
 <img width="684" alt="Screen Shot 2022-05-04 at 3 42 39 PM" src="https://user-images.githubusercontent.com/12057795/166837272-f3b9ec59-a028-4da4-a35a-e5c7feb02931.png">
