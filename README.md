@@ -42,13 +42,13 @@ global_settings:
 
   <img width="685" alt="Screen Shot 2022-05-04 at 4 21 45 PM" src="https://user-images.githubusercontent.com/12057795/166840978-826918f2-3275-4096-bb5a-aecf2e1731d8.png">
 
+Sub-workfloe for NTP configuration:
+  
+  <img width="645" alt="Screen Shot 2022-05-04 at 4 42 13 PM" src="https://user-images.githubusercontent.com/12057795/166842448-015a26eb-acd4-4047-aaa5-2b605d04b509.png">
+  
   Sub-workflow for vLAN configuration:
 
   <img width="641" alt="Screen Shot 2022-05-04 at 3 45 27 PM" src="https://user-images.githubusercontent.com/12057795/166837512-c71348ab-9941-49d7-b6c5-513690a85489.png">
-  
-  Sub-workfloe for NTP configuration:
-  
-  <img width="645" alt="Screen Shot 2022-05-04 at 4 42 13 PM" src="https://user-images.githubusercontent.com/12057795/166842448-015a26eb-acd4-4047-aaa5-2b605d04b509.png">
 
   Sub-workflow for vPC configuration:
 
