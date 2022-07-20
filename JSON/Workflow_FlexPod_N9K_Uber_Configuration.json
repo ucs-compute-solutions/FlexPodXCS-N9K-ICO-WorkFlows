@@ -1,0 +1,3902 @@
+[
+  {
+    "Body": {
+      "ClassId": "workflow.CustomDataTypeDefinition",
+      "CompositeType": true,
+      "Description": "This data type takes holds information about a formatted string.",
+      "Label": "Formatted Text",
+      "Name": "FormattedText",
+      "ObjectType": "workflow.CustomDataTypeDefinition",
+      "ParameterSet": [],
+      "Properties": {
+        "ObjectType": "workflow.CustomDataTypeProperties"
+      },
+      "SharedScope": "shared",
+      "TypeDefinition": [
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "The content type of the request. Currently supports JSON and Text.\n",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Content Type",
+          "Name": "ContentType",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [
+                {
+                  "Label": "JSON",
+                  "ObjectType": "workflow.EnumEntry",
+                  "Value": "json"
+                },
+                {
+                  "Label": "Text",
+                  "ObjectType": "workflow.EnumEntry",
+                  "Value": "text"
+                }
+              ],
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "enum"
+          },
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "The content of the formatted text that can spawn multiple lines.",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Text",
+          "Name": "Text",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "string"
+          },
+          "Required": true
+        }
+      ]
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/CustomDataTypeDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.CustomDataTypeDefinition",
+      "Description": "The types of values that can be extracted from API responses in IO Generic API tasks.",
+      "Label": "Response Parameter Type",
+      "Name": "ResponseParameterTypeEnum",
+      "ObjectType": "workflow.CustomDataTypeDefinition",
+      "ParameterSet": [],
+      "Properties": {
+        "ObjectType": "workflow.CustomDataTypeProperties"
+      },
+      "SharedScope": "shared",
+      "TypeDefinition": [
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "The types of values that can be extracted from API responses in IO Generic API tasks. The JSON type can be used to extract any type of value from response as a parameter.",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Parameter Type",
+          "Name": "ParameterType",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [
+                {
+                  "Label": "String",
+                  "ObjectType": "workflow.EnumEntry",
+                  "Value": "string"
+                },
+                {
+                  "Label": "Integer",
+                  "ObjectType": "workflow.EnumEntry",
+                  "Value": "integer"
+                },
+                {
+                  "Label": "Float",
+                  "ObjectType": "workflow.EnumEntry",
+                  "Value": "float"
+                },
+                {
+                  "Label": "Boolean",
+                  "ObjectType": "workflow.EnumEntry",
+                  "Value": "boolean"
+                },
+                {
+                  "Label": "JSON",
+                  "ObjectType": "workflow.EnumEntry",
+                  "Value": "json"
+                }
+              ],
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "enum"
+          },
+          "Required": true
+        }
+      ]
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/CustomDataTypeDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.CustomDataTypeDefinition",
+      "CompositeType": true,
+      "Description": "This data type takes information about a parameter that needs to be extracted from an API response in Generic API tasks.",
+      "Label": "Response Parameter",
+      "Name": "ResponseParameter",
+      "ObjectType": "workflow.CustomDataTypeDefinition",
+      "ParameterSet": [],
+      "Properties": {
+        "ObjectType": "workflow.CustomDataTypeProperties"
+      },
+      "SharedScope": "shared",
+      "TypeDefinition": [
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "The content specific path information that identifies the parameter value within the content. The value is usually a XPath or JSONPath or a regular expression in case of text content.",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Path",
+          "Name": "Path",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "string"
+          },
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Name of the response parameter.",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Name",
+          "Name": "Name",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "string"
+          },
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "The response parameter type - will be one of string, integer, float, boolean, complex or collection. If the type is not specified, parameter will be considered of string type by default.",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Type",
+          "Name": "Type",
+          "ObjectType": "workflow.CustomDataType",
+          "Properties": {
+            "CatalogMoid": "shared",
+            "CustomDataTypeName": "ResponseParameterTypeEnum",
+            "ObjectType": "workflow.CustomDataProperty"
+          }
+        }
+      ]
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/CustomDataTypeDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.CustomDataTypeDefinition",
+      "CompositeType": true,
+      "Description": "Response parser framework supports extraction of required values from API/device responses. These responses may be of various content types such as XML, JSON, etc. The values of importance are modeled as parameters in the response parser framework.\nThe parameters can be of a scalar value type or a collection of values. A group of related parameters can be modeled as a single complex type parameter. These complex types will be very useful to extract a set of repeating group of related parameters.\nA response parser specification defines the set of parameters that need to be extracted from the content. The response parser specification allows complex type definitions to be defined for any complex parameters.",
+      "Label": "Response Parser",
+      "Name": "ResponseParserType",
+      "ObjectType": "workflow.CustomDataTypeDefinition",
+      "ParameterSet": [],
+      "Properties": {
+        "ObjectType": "workflow.CustomDataTypeProperties"
+      },
+      "SharedScope": "shared",
+      "TypeDefinition": [
+        {
+          "ArrayItemType": {
+            "ObjectType": "workflow.CustomArrayItem",
+            "Properties": {
+              "CatalogMoid": "shared",
+              "CustomDataTypeName": "ResponseParameter",
+              "ObjectType": "workflow.CustomDataProperty"
+            }
+          },
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "The collection of parameters that need to be extracted from the API response.\n",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Parameters",
+          "Max": 10,
+          "Min": 1,
+          "Name": "Parameters",
+          "ObjectType": "workflow.ArrayDataType"
+        }
+      ]
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/CustomDataTypeDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.CustomDataTypeDefinition",
+      "Description": "The outcome type specifies status of the task to be set when the outcome condition evaluates to true.",
+      "Label": "Outcome Type Enum",
+      "Name": "OutcomeTypeEnum",
+      "ObjectType": "workflow.CustomDataTypeDefinition",
+      "ParameterSet": [],
+      "Properties": {
+        "ObjectType": "workflow.CustomDataTypeProperties"
+      },
+      "SharedScope": "shared",
+      "TypeDefinition": [
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "The outcome type specifies status of the task to be set when the outcome condition evaluates to true.",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Outcome Type",
+          "Name": "OutcomeType",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [
+                {
+                  "Label": "Success",
+                  "ObjectType": "workflow.EnumEntry",
+                  "Value": "Success"
+                },
+                {
+                  "Label": "Error",
+                  "ObjectType": "workflow.EnumEntry",
+                  "Value": "Error"
+                },
+                {
+                  "Label": "Skip Task Execution",
+                  "ObjectType": "workflow.EnumEntry",
+                  "Value": "SkipTaskExecution"
+                },
+                {
+                  "Label": "Terminal Error",
+                  "ObjectType": "workflow.EnumEntry",
+                  "Value": "TerminalError"
+                }
+              ],
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "enum"
+          },
+          "Required": true
+        }
+      ]
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/CustomDataTypeDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.CustomDataTypeDefinition",
+      "CompositeType": true,
+      "Description": "Intersight Orchestrator allows the users to specify the different API outcomes.\nThe task status message for an outcome can be specified. An outcome can be qualified as recoverable/non-recoverable error condition.",
+      "Label": "Outcome",
+      "Name": "Outcome",
+      "ObjectType": "workflow.CustomDataTypeDefinition",
+      "ParameterSet": [],
+      "Properties": {
+        "ObjectType": "workflow.CustomDataTypeProperties"
+      },
+      "SharedScope": "shared",
+      "TypeDefinition": [
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "The user friendly name given to the task outcome.\n",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Name",
+          "Name": "Name",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "string"
+          },
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "The condition expression that uses a golang template logical expression to mark this outcome when the condition evaluates to true for the task execution.\nThe condition can refer outputs extracted via the response parser. The format to refer the captured output is {{.local.response.<captured-parameter-name>}}.\nLets say we have defined 'Name' in the response parser specification and in the condition we want to check if the extracted output 'Name' equals to string value 'Test', condition looks like - {{eq .local.response.Name \"Test\"}}. Make sure to enclose the value within double quotes if it is of string datatype.\n",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Condition",
+          "Name": "Condition",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "string"
+          },
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "The message to be shown when the outcome specified by condition occurs. Message can have references to the response\nparser captured output.\n",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Message",
+          "Name": "Message",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "string"
+          }
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "The outcome type based on which task status is updated accordingly. Following outcome types are defined. 1. Success              - Indicates that the outcome is a success and task execution status is marked as 'success'.\n2. Error                - Indicates that the outcome is an error and task execution status is marked as 'failed'.\n3. Skip Task Execution  - Indicates that the task needs to be skipped based on the condition specified and\n                          mark the execution status as 'NO_OP'.\n",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Type of the outcome",
+          "Name": "Type",
+          "ObjectType": "workflow.CustomDataType",
+          "Properties": {
+            "CatalogMoid": "shared",
+            "CustomDataTypeName": "OutcomeTypeEnum",
+            "ObjectType": "workflow.CustomDataProperty"
+          }
+        }
+      ]
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/CustomDataTypeDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.TaskDefinition",
+      "Description": "Invokes the given Web API against the given endpoint. The endpoint can be Intersight API or an external endpoint added as Target in Intersight. Please refer Supported Endpoints section in the Web API request end user documentation for the list of Intersight Targets on which Web API task can be invoked.\n",
+      "Label": "Invoke Web API Request",
+      "Name": "InvokeGenericWebApi",
+      "ObjectType": "workflow.TaskDefinition",
+      "Properties": {
+        "ExternalMeta": true,
+        "InputDefinition": [
+          {
+            "CustomDataTypeProperties": {
+              "CatalogMoid": "shared",
+              "ObjectType": "workflow.CustomDataProperty"
+            },
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "The API call can be made to Intersight or an external endpoint added as Target. Target should be in claimed or connected state. Please refer Supported Endpoints section in the Web API request end user documentation for the list of Intersight Targets on which Web API task can be invoked. An empty value for this input indicates that the API call is made to Intersight.\n",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "External Target",
+            "Name": "Target",
+            "ObjectType": "workflow.TargetDataType",
+            "Properties": [
+              {
+                "DisplayAttributes": [
+                  "Name",
+                  "TargetType"
+                ],
+                "ObjectType": "workflow.TargetProperty",
+                "Selector": "/api/v1/asset/Targets?$filter=((TargetType eq HTTPEndpoint and Status eq Claimed) or ((TargetType eq PureStorageFlashArray or TargetType eq HitachiVirtualStoragePlatform or TargetType eq NetAppActiveIqUnifiedManager or TargetType eq TerraformCloud or TargetType eq VmwareVcenter or TargetType eq APIC) and Status eq Connected))",
+                "SelectorProperty": {
+                  "Method": "GET",
+                  "ObjectType": "workflow.SelectorProperty"
+                },
+                "SupportedObjects": [
+                  "asset.Target"
+                ]
+              }
+            ]
+          },
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "HTTP protocol to be used - HTTP, HTTPS. Populated implicitly by fetching the value from target task input if API endpoint is added as target within Intersight. Default value of HTTPS is set if not specified in other scenarios.\n",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Protocol",
+            "Name": "Protocol",
+            "ObjectType": "workflow.PrimitiveDataType",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [
+                  {
+                    "Label": "HTTP",
+                    "ObjectType": "workflow.EnumEntry",
+                    "Value": "http"
+                  },
+                  {
+                    "Label": "HTTPS",
+                    "ObjectType": "workflow.EnumEntry",
+                    "Value": "https"
+                  }
+                ],
+                "ObjectType": "workflow.Constraints"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "enum"
+            }
+          },
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "HTTP method to be requested on the given URL. If the value is not given, GET is used as default.\n",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Method",
+            "Name": "Method",
+            "ObjectType": "workflow.PrimitiveDataType",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [
+                  {
+                    "Label": "GET",
+                    "ObjectType": "workflow.EnumEntry",
+                    "Value": "GET"
+                  },
+                  {
+                    "Label": "HEAD",
+                    "ObjectType": "workflow.EnumEntry",
+                    "Value": "HEAD"
+                  },
+                  {
+                    "Label": "POST",
+                    "ObjectType": "workflow.EnumEntry",
+                    "Value": "POST"
+                  },
+                  {
+                    "Label": "PUT",
+                    "ObjectType": "workflow.EnumEntry",
+                    "Value": "PUT"
+                  },
+                  {
+                    "Label": "PATCH",
+                    "ObjectType": "workflow.EnumEntry",
+                    "Value": "PATCH"
+                  },
+                  {
+                    "Label": "DELETE",
+                    "ObjectType": "workflow.EnumEntry",
+                    "Value": "DELETE"
+                  },
+                  {
+                    "Label": "OPTIONS",
+                    "ObjectType": "workflow.EnumEntry",
+                    "Value": "OPTIONS"
+                  }
+                ],
+                "ObjectType": "workflow.Constraints"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "enum"
+            }
+          },
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "Relative URL for Intersight, Device Registration and Target APIs. Does not support specifying fully qualified URL.\n",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "URL",
+            "Name": "Url",
+            "ObjectType": "workflow.PrimitiveDataType",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [],
+                "ObjectType": "workflow.Constraints"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "string"
+            },
+            "Required": true
+          },
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "The request headers that need to be sent in the request in key value pairs list.\n",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Headers",
+            "Name": "Headers",
+            "ObjectType": "workflow.PrimitiveDataType",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [],
+                "ObjectType": "workflow.Constraints"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "json"
+            }
+          },
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "The key value pairs given in this input will be sent in HTTP 'Cookie' header.\n",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Cookies",
+            "Name": "Cookies",
+            "ObjectType": "workflow.PrimitiveDataType",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [],
+                "ObjectType": "workflow.Constraints"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "json"
+            }
+          },
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "The type of the response. Currently supports JSON.\n",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Response Type",
+            "Name": "ContentType",
+            "ObjectType": "workflow.PrimitiveDataType",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [
+                  {
+                    "Label": "JSON",
+                    "ObjectType": "workflow.EnumEntry",
+                    "Value": "json"
+                  }
+                ],
+                "ObjectType": "workflow.Constraints"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "enum"
+            }
+          },
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "The optional request body that is sent as part of this API request. The request body can contain golang templates that can be populated with task input parameters and previous API output parameters.\n",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Body",
+            "Name": "Body",
+            "ObjectType": "workflow.CustomDataType",
+            "Properties": {
+              "CatalogMoid": "shared",
+              "CustomDataTypeName": "FormattedText",
+              "ObjectType": "workflow.CustomDataProperty"
+            }
+          },
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "The structure of the response parser shall provide the list of values that need to be extracted from the API response.\n",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Response Parser",
+            "Name": "ResponseParser",
+            "ObjectType": "workflow.CustomDataType",
+            "Properties": {
+              "CatalogMoid": "shared",
+              "CustomDataTypeName": "ResponseParserType",
+              "ObjectType": "workflow.CustomDataProperty"
+            }
+          },
+          {
+            "ArrayItemType": {
+              "ObjectType": "workflow.CustomArrayItem",
+              "Properties": {
+                "CatalogMoid": "shared",
+                "CustomDataTypeName": "Outcome",
+                "ObjectType": "workflow.CustomDataProperty"
+              }
+            },
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "Allows to capture the possible outcomes of this API. This is a collection of outcomes which gets evaluated in the order they are given. If an outcome condition evaluates to 'true', status of the task can be set to one of the supported types - Success, Error or no operation and also an optional task execution message can be set.\nAt the end of the outcomes list, a catchall success/fail outcome can be added with condition explicitly set as 'true'. This allows to mark the status of task execution either success or failure when none of the previous outcomes match.\nWhen no outcomes is specified, default behaviour is to mark the API execution status 'success' if obtained HTTP status code is 2xx else mark it as 'failed'.\n",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Outcomes",
+            "Max": 10,
+            "Name": "Outcomes",
+            "ObjectType": "workflow.ArrayDataType"
+          }
+        ],
+        "ObjectType": "workflow.Properties",
+        "OutputDefinition": [
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "The response headers that are extracted from the API response.\n",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Headers",
+            "Name": "Headers",
+            "ObjectType": "workflow.PrimitiveDataType",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [],
+                "ObjectType": "workflow.Constraints"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "json"
+            }
+          },
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "The list of cookies obtained from the response in the form of key value pairs.\n",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Cookies",
+            "Name": "Cookies",
+            "ObjectType": "workflow.PrimitiveDataType",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [],
+                "ObjectType": "workflow.Constraints"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "json"
+            }
+          },
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "The HTTP status code of the Web API response.\n",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Status Code",
+            "Name": "StatusCode",
+            "ObjectType": "workflow.PrimitiveDataType",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [],
+                "ObjectType": "workflow.Constraints"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "integer"
+            }
+          },
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "The HTTP status message of the Web API response.\n",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Status Message",
+            "Name": "StatusMessage",
+            "ObjectType": "workflow.PrimitiveDataType",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [],
+                "ObjectType": "workflow.Constraints"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "string"
+            }
+          },
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "The list of output parameters extracted from the response.\n",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Parameters",
+            "Name": "Parameters",
+            "ObjectType": "workflow.PrimitiveDataType",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [],
+                "ObjectType": "workflow.Constraints"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "json"
+            }
+          }
+        ],
+        "RetryDelay": 60,
+        "RetryPolicy": "Fixed",
+        "SupportStatus": "Supported",
+        "Timeout": 120,
+        "TimeoutPolicy": "Timeout"
+      },
+      "RollbackTasks": [],
+      "SharedScope": "shared",
+      "Tags": [
+        {
+          "Key": "category",
+          "Value": "Executors"
+        }
+      ],
+      "Version": 1
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/TaskDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.WorkflowDefinition",
+      "DefaultVersion": true,
+      "Description": "Features - LACP, LLDP & vPC etc",
+      "InputDefinition": [
+        {
+          "CustomDataTypeProperties": {
+            "CatalogMoid": "shared",
+            "ObjectType": "workflow.CustomDataProperty"
+          },
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "List of Switch Targets to be configured",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "IsArray": true,
+          "Label": "Select Switch Devices",
+          "Max": 2,
+          "Min": 2,
+          "Name": "SwitchTargets",
+          "ObjectType": "workflow.TargetDataType",
+          "Properties": [
+            {
+              "ConnectorAttribute": "Name",
+              "DisplayAttributes": [
+                "Name",
+                "ObjectType",
+                "ClaimedByUserName"
+              ],
+              "ObjectType": "workflow.TargetProperty",
+              "Selector": "/api/v1/asset/Targets?$filter=TargetType eq NexusDevice",
+              "SelectorProperty": {
+                "Method": "GET",
+                "ObjectType": "workflow.SelectorProperty"
+              },
+              "SupportedObjects": [
+                "asset.Target"
+              ]
+            }
+          ],
+          "Required": true
+        }
+      ],
+      "InputParameterSet": [],
+      "Label": "Feature Enablement",
+      "Name": "FeatureEnablement",
+      "ObjectType": "workflow.WorkflowDefinition",
+      "OutputDefinition": [],
+      "Properties": {
+        "ExternalMeta": true,
+        "ObjectType": "workflow.WorkflowProperties",
+        "SupportStatus": "Supported"
+      },
+      "SharedScope": "user",
+      "Tasks": [
+        {
+          "Description": "Start",
+          "Label": "Start",
+          "Name": "StartTask",
+          "NextTask": "FeatureEnablementLoopTask",
+          "ObjectType": "workflow.StartTask"
+        },
+        {
+          "Count": "{{len .global.workflow.input.SwitchTargets}}",
+          "Description": "Loop Task",
+          "Label": "Feature Enablement Loop Task",
+          "LoopStartTask": "FeatureEnablement",
+          "Name": "FeatureEnablementLoopTask",
+          "NumberOfBatches": 1,
+          "ObjectType": "workflow.LoopTask",
+          "OnSuccess": "ValidationLoopTask",
+          "Parallel": true
+        },
+        {
+          "CatalogMoid": "shared",
+          "InputParameters": {
+            "Body": {
+              "ContentType": "json",
+              "Text": "{\n  \"ins_api\": {\n    \"version\": \"1.0\",\n    \"type\": \"cli_conf\",\n    \"chunk\": \"0\",\n    \"sid\": \"sid\",\n    \"input\": \"feature lacp ;feature lldp ;feature vpc ;feature udld ;feature interface-vlan\",\n    \"output_format\": \"json\"\n  }\n}"
+            },
+            "ContentType": "json",
+            "Method": "POST",
+            "Protocol": "https",
+            "ResponseParser": {
+              "Parameters": [
+                {
+                  "Name": "http_status_code",
+                  "Path": "$.ins_api.outputs.output[:].code",
+                  "Type": "integer"
+                },
+                {
+                  "Name": "message",
+                  "Path": "$.ins_api.outputs.output[:].msg",
+                  "Type": "string"
+                }
+              ]
+            },
+            "Target": "{{index .global.workflow.input.SwitchTargets .iteration |ToJson}}",
+            "Url": "/ins"
+          },
+          "Label": "Feature Enablement",
+          "Name": "FeatureEnablement",
+          "ObjectType": "workflow.WorkerTask",
+          "TaskDefinitionName": "InvokeGenericWebApi",
+          "Version": 1
+        },
+        {
+          "Count": "{{len .global.workflow.input.SwitchTargets}}",
+          "Description": "Feature Validation Loop Task",
+          "Label": "Validation Loop Task",
+          "LoopStartTask": "FeatureConfigQuery",
+          "Name": "ValidationLoopTask",
+          "NumberOfBatches": 1,
+          "ObjectType": "workflow.LoopTask",
+          "OnSuccess": "SuccessEndTask",
+          "Parallel": true
+        },
+        {
+          "CatalogMoid": "shared",
+          "Description": "Feature Validation Task",
+          "InputParameters": {
+            "Body": {
+              "ContentType": "json",
+              "Text": "{\r\n  \"ins_api\": {\r\n    \"version\": \"1.0\",\r\n    \"type\": \"cli_show\",\r\n    \"chunk\": \"0\",\r\n    \"sid\": \"sid\",\r\n    \"input\": \"show feature \",\r\n    \"output_format\": \"json\"\r\n  }\r\n}"
+            },
+            "ContentType": "json",
+            "Method": "POST",
+            "Outcomes": [
+              {
+                "Condition": "{{ne (index .local.response.lacp_feature 0) `enabled`}}",
+                "Message": "LACP Feature Enablement Check Failed",
+                "Name": "LACP Feature Check",
+                "Type": "Error"
+              },
+              {
+                "Condition": "{{ne (index .local.response.lldp_feature 0) `enabled`}}",
+                "Message": "LLDP Feature Enablement Check Failed",
+                "Name": "LLDP Feature Check",
+                "Type": "Error"
+              },
+              {
+                "Condition": "{{ne (index .local.response.vpc_feature 0) `enabled`}}",
+                "Message": "VPC Feature Enablement Check Failed",
+                "Name": "VPC Feature Check",
+                "Type": "Error"
+              },
+              {
+                "Condition": "{{ne (index .local.response.udld_feature 0) `enabled`}}",
+                "Message": "UDLD Feature Enablement Check Failed",
+                "Name": "UDLD Feature Check",
+                "Type": "Error"
+              },
+              {
+                "Condition": "{{ne (index .local.response.interface_vlan_feature 0) `enabled`}}",
+                "Message": "Interface VLAN Feature Enablement Check Failed",
+                "Name": "Interface VLAN Feature Check",
+                "Type": "Error"
+              }
+            ],
+            "Protocol": "https",
+            "ResponseParser": {
+              "Parameters": [
+                {
+                  "Name": "lacp_feature",
+                  "Path": "$..ROW_cfcFeatureCtrlTable[?(@.cfcFeatureCtrlName2==\"lacp\")].cfcFeatureCtrlOpStatus2",
+                  "Type": "string"
+                },
+                {
+                  "Name": "lldp_feature",
+                  "Path": "$..ROW_cfcFeatureCtrlTable[?(@.cfcFeatureCtrlName2==\"lldp\")].cfcFeatureCtrlOpStatus2",
+                  "Type": "string"
+                },
+                {
+                  "Name": "vpc_feature",
+                  "Path": "$..ROW_cfcFeatureCtrlTable[?(@.cfcFeatureCtrlName2==\"vpc\")].cfcFeatureCtrlOpStatus2",
+                  "Type": "string"
+                },
+                {
+                  "Name": "udld_feature",
+                  "Path": "$..ROW_cfcFeatureCtrlTable[?(@.cfcFeatureCtrlName2==\"udld\")].cfcFeatureCtrlOpStatus2",
+                  "Type": "string"
+                },
+                {
+                  "Name": "interface_vlan_feature",
+                  "Path": "$..ROW_cfcFeatureCtrlTable[?(@.cfcFeatureCtrlName2==\"interface-vlan\")].cfcFeatureCtrlOpStatus2",
+                  "Type": "string"
+                }
+              ]
+            },
+            "Target": "{{index .global.workflow.input.SwitchTargets .iteration |ToJson}}",
+            "Url": "/ins"
+          },
+          "Label": "Feature Validation",
+          "Name": "FeatureConfigQuery",
+          "ObjectType": "workflow.WorkerTask",
+          "TaskDefinitionName": "InvokeGenericWebApi",
+          "Version": 1
+        },
+        {
+          "Name": "SuccessEndTask",
+          "ObjectType": "workflow.SuccessEndTask"
+        },
+        {
+          "Name": "FailureEndTask",
+          "ObjectType": "workflow.FailureEndTask"
+        }
+      ],
+      "UiInputFilters": [],
+      "VariableDefinition": [],
+      "Version": 1
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/WorkflowDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.WorkflowDefinition",
+      "DefaultVersion": true,
+      "Description": "Do Global Settings On Switch",
+      "InputDefinition": [
+        {
+          "CustomDataTypeProperties": {
+            "CatalogMoid": "shared",
+            "ObjectType": "workflow.CustomDataProperty"
+          },
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "List of Switch Targets to be configured",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "IsArray": true,
+          "Label": "Select Switch Devices",
+          "Max": 2,
+          "Min": 2,
+          "Name": "SwitchTargets",
+          "ObjectType": "workflow.TargetDataType",
+          "Properties": [
+            {
+              "ConnectorAttribute": "Name",
+              "DisplayAttributes": [
+                "Name",
+                "ObjectType",
+                "ClaimedByUserName"
+              ],
+              "ObjectType": "workflow.TargetProperty",
+              "Selector": "/api/v1/asset/Targets?$filter=TargetType eq NexusDevice",
+              "SelectorProperty": {
+                "Method": "GET",
+                "ObjectType": "workflow.SelectorProperty"
+              },
+              "SupportedObjects": [
+                "asset.Target"
+              ]
+            }
+          ],
+          "Required": true
+        }
+      ],
+      "InputParameterSet": [],
+      "Label": "Global Settings",
+      "Name": "GlobalSettings",
+      "ObjectType": "workflow.WorkflowDefinition",
+      "OutputDefinition": [],
+      "Properties": {
+        "ExternalMeta": true,
+        "ObjectType": "workflow.WorkflowProperties",
+        "SupportStatus": "Supported"
+      },
+      "SharedScope": "user",
+      "Tasks": [
+        {
+          "Name": "StartTask",
+          "NextTask": "GlobalSettingsLoop",
+          "ObjectType": "workflow.StartTask"
+        },
+        {
+          "Count": "{{len .global.workflow.input.SwitchTargets}}",
+          "Description": "Global Settings Loop Task",
+          "Label": "Global Settings Loop Task",
+          "LoopStartTask": "GlobalSettingsTask",
+          "Name": "GlobalSettingsLoop",
+          "NumberOfBatches": 1,
+          "ObjectType": "workflow.LoopTask",
+          "OnSuccess": "ValidationLoopTask",
+          "Parallel": true
+        },
+        {
+          "CatalogMoid": "shared",
+          "InputParameters": {
+            "Body": {
+              "ContentType": "json",
+              "Text": "{\n  \"ins_api\": {\n    \"version\": \"1.0\",\n    \"type\": \"cli_conf\",\n    \"chunk\": \"0\",\n    \"sid\": \"sid\",\n    \"input\": \"spanning-tree port type edge bpduguard default ;spanning-tree port type edge bpdufilter default ;port-channel load-balance src-dst l4port ;system default switchport ;\",\n    \"output_format\": \"json\"\n  }\n}"
+            },
+            "ContentType": "json",
+            "Method": "POST",
+            "Protocol": "https",
+            "ResponseParser": {
+              "Parameters": [
+                {
+                  "Name": "http_status_code",
+                  "Path": "$.ins_api.outputs.output[:].code",
+                  "Type": "integer"
+                },
+                {
+                  "Name": "message",
+                  "Path": "$.ins_api.outputs.output[:].msg",
+                  "Type": "string"
+                }
+              ]
+            },
+            "Target": "{{index .global.workflow.input.SwitchTargets .iteration |ToJson}}",
+            "Url": "/ins"
+          },
+          "Label": "Configure Global Setting on Switch",
+          "Name": "GlobalSettingsTask",
+          "ObjectType": "workflow.WorkerTask",
+          "TaskDefinitionName": "InvokeGenericWebApi",
+          "Version": 1
+        },
+        {
+          "Count": "{{len .global.workflow.input.SwitchTargets}}",
+          "Description": "Global Settings Validation Loop Task",
+          "Label": "Validation Loop Task",
+          "LoopStartTask": "GlobalSettingsCheck",
+          "Name": "ValidationLoopTask",
+          "NumberOfBatches": 1,
+          "ObjectType": "workflow.LoopTask",
+          "OnSuccess": "SuccessEndTask",
+          "Parallel": true
+        },
+        {
+          "CatalogMoid": "shared",
+          "Description": "Global Settings Validation Task",
+          "InputParameters": {
+            "Body": {
+              "ContentType": "json",
+              "Text": "{\r\n  \"ins_api\": {\r\n    \"version\": \"1.0\",\r\n    \"type\": \"cli_show\",\r\n    \"chunk\": \"0\",\r\n    \"sid\": \"sid\",\r\n    \"input\": \"show spanning-tree summary ; show port-channel load-balance ; \",\r\n    \"output_format\": \"json\"\r\n  }\r\n}"
+            },
+            "ContentType": "json",
+            "Method": "POST",
+            "Outcomes": [
+              {
+                "Condition": "{{ne (index .local.response.spt_bpdu_guard 0) `enable` }}",
+                "Message": "Spanning Tree bpdu guard Global Setting Check Failed",
+                "Name": "Spanning Tree bpdu guard Check",
+                "Type": "Error"
+              },
+              {
+                "Condition": "{{ne (index .local.response.spt_bpdu_filter 0) `enable` }}",
+                "Message": "Spanning Tree bpdu filter Global Setting Check Failed",
+                "Name": "Spanning Tree bpdu filter Check",
+                "Type": "Error"
+              },
+              {
+                "Condition": "{{ne (index .local.response.pc_lb_ipv4 0) `l4port` }}",
+                "Message": "Port Channel LB Global Setting Check Failed",
+                "Name": "Port Channel LB Check",
+                "Type": "Error"
+              }
+            ],
+            "Protocol": "https",
+            "ResponseParser": {
+              "Parameters": [
+                {
+                  "Name": "spt_bpdu_guard",
+                  "Path": "$..body.bpdu_guard",
+                  "Type": "string"
+                },
+                {
+                  "Name": "spt_bpdu_filter",
+                  "Path": "$..body.bpdu_filter",
+                  "Type": "string"
+                },
+                {
+                  "Name": "pc_lb_ipv4",
+                  "Path": "$..ROW_mod_configs[\"mod-ipv4-sel\"]",
+                  "Type": "string"
+                }
+              ]
+            },
+            "Target": "{{index .global.workflow.input.SwitchTargets .iteration |ToJson}}",
+            "Url": "/ins"
+          },
+          "Label": "Global Settings Validation",
+          "Name": "GlobalSettingsCheck",
+          "ObjectType": "workflow.WorkerTask",
+          "TaskDefinitionName": "InvokeGenericWebApi",
+          "Version": 1
+        },
+        {
+          "Name": "SuccessEndTask",
+          "ObjectType": "workflow.SuccessEndTask"
+        },
+        {
+          "Name": "FailureEndTask",
+          "ObjectType": "workflow.FailureEndTask"
+        }
+      ],
+      "UiInputFilters": [],
+      "UiRenderingData": {
+        "Positions": [
+          {
+            "Name": "StartTask",
+            "X": 273.5,
+            "Y": 35.5
+          },
+          {
+            "Name": "GlobalSettingsLoop",
+            "X": 178.5,
+            "Y": 107
+          },
+          {
+            "Name": "GlobalSettingsTask",
+            "X": 188.5,
+            "Y": 198
+          },
+          {
+            "Name": "SuccessEndTask",
+            "X": 273.5,
+            "Y": 521
+          },
+          {
+            "Name": "FailureEndTask",
+            "X": 416.5,
+            "Y": 521
+          },
+          {
+            "Name": "ValidationLoopTask",
+            "X": 178.5,
+            "Y": 314
+          },
+          {
+            "Name": "GlobalSettingsCheck",
+            "X": 188.5,
+            "Y": 405
+          }
+        ]
+      },
+      "VariableDefinition": [],
+      "Version": 1
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/WorkflowDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.TaskDefinition",
+      "DefaultVersion": true,
+      "Description": "Delete VLANs on Switch",
+      "Label": "Delete VLANs on Switch",
+      "Name": "DeleteVLANsonSwitch",
+      "ObjectType": "workflow.TaskDefinition",
+      "Properties": {
+        "ExternalMeta": true,
+        "InputDefinition": [
+          {
+            "CustomDataTypeProperties": {
+              "CatalogMoid": "shared",
+              "ObjectType": "workflow.CustomDataProperty"
+            },
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "Switch Target to be configured",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Switch Target",
+            "Name": "SwitchTarget",
+            "ObjectType": "workflow.TargetDataType",
+            "Properties": [
+              {
+                "ConnectorAttribute": "Name",
+                "DisplayAttributes": [
+                  "Name",
+                  "ObjectType"
+                ],
+                "ObjectType": "workflow.TargetProperty",
+                "Selector": "/api/v1/asset/Targets?$filter=(TargetType eq HTTPEndpoint and Status eq Claimed)",
+                "SelectorProperty": {
+                  "Method": "GET",
+                  "ObjectType": "workflow.SelectorProperty"
+                },
+                "SupportedObjects": [
+                  "asset.Target"
+                ]
+              }
+            ],
+            "Required": true
+          },
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "Enter Starting VLAN ID",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Start-VLAN-ID",
+            "Name": "StartVLAN",
+            "ObjectType": "workflow.PrimitiveDataType",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [],
+                "Max": 4094,
+                "Min": 1,
+                "ObjectType": "workflow.Constraints"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "integer"
+            },
+            "Required": true
+          },
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "Enter End VLAN ID",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "End-VLAN-ID",
+            "Name": "EndVLAN",
+            "ObjectType": "workflow.PrimitiveDataType",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [],
+                "Max": 4094,
+                "Min": 1,
+                "ObjectType": "workflow.Constraints"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "integer"
+            },
+            "Required": true
+          }
+        ],
+        "ObjectType": "workflow.Properties",
+        "OutputDefinition": [],
+        "RetryCount": 3,
+        "RetryDelay": 10,
+        "RetryPolicy": "Fixed",
+        "SupportStatus": "Supported",
+        "Timeout": 600,
+        "TimeoutPolicy": "Timeout"
+      },
+      "RollbackTasks": [],
+      "SharedScope": "user",
+      "Version": 1
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/TaskDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.TaskDefinition",
+      "DefaultVersion": true,
+      "Description": "Create VLANs on Switch",
+      "Label": "Create VLANs on Switch",
+      "Name": "CreateVLANsonSwitch",
+      "ObjectType": "workflow.TaskDefinition",
+      "Properties": {
+        "ExternalMeta": true,
+        "InputDefinition": [
+          {
+            "CustomDataTypeProperties": {
+              "CatalogMoid": "shared",
+              "ObjectType": "workflow.CustomDataProperty"
+            },
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "Switch Target to be configured",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Switch Target",
+            "Name": "SwitchTarget",
+            "ObjectType": "workflow.TargetDataType",
+            "Properties": [
+              {
+                "ConnectorAttribute": "Name",
+                "DisplayAttributes": [
+                  "Name",
+                  "ObjectType"
+                ],
+                "ObjectType": "workflow.TargetProperty",
+                "Selector": "/api/v1/asset/Targets?$filter=(TargetType eq HTTPEndpoint and Status eq Claimed)",
+                "SelectorProperty": {
+                  "Method": "GET",
+                  "ObjectType": "workflow.SelectorProperty"
+                },
+                "SupportedObjects": [
+                  "asset.Target"
+                ]
+              }
+            ],
+            "Required": true
+          },
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "Enter Starting VLAN ID",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Start-VLAN-ID",
+            "Name": "StartVLAN",
+            "ObjectType": "workflow.PrimitiveDataType",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [],
+                "Max": 4094,
+                "Min": 1,
+                "ObjectType": "workflow.Constraints"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "integer"
+            },
+            "Required": true
+          },
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "Enter End VLAN ID",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "End-VLAN-ID",
+            "Name": "EndVLAN",
+            "ObjectType": "workflow.PrimitiveDataType",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [],
+                "Max": 4094,
+                "Min": 1,
+                "ObjectType": "workflow.Constraints"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "integer"
+            },
+            "Required": true
+          }
+        ],
+        "ObjectType": "workflow.Properties",
+        "OutputDefinition": [],
+        "RetryCount": 3,
+        "RetryDelay": 10,
+        "RetryPolicy": "Fixed",
+        "SupportStatus": "Supported",
+        "Timeout": 600,
+        "TimeoutPolicy": "Timeout"
+      },
+      "RollbackTasks": [
+        {
+          "CatalogMoid": "user",
+          "Description": "Delete VLANs on Switch",
+          "InputParameters": {
+            "EndVLAN": "${task.input.EndVLAN}",
+            "StartVLAN": "${task.input.StartVLAN}",
+            "SwitchTarget": "${task.input.SwitchTarget}"
+          },
+          "Name": "DeleteVLANsonSwitch",
+          "ObjectType": "workflow.RollbackTask",
+          "Version": 1
+        }
+      ],
+      "SharedScope": "user",
+      "Version": 1
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/TaskDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.WorkflowDefinition",
+      "DefaultVersion": true,
+      "Description": "VLAN Configuration with range",
+      "InputDefinition": [
+        {
+          "CustomDataTypeProperties": {
+            "CatalogMoid": "shared",
+            "ObjectType": "workflow.CustomDataProperty"
+          },
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "List of Switch Targets to be configured",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "IsArray": true,
+          "Label": "Select Switch Devices",
+          "Max": 2,
+          "Min": 2,
+          "Name": "SwitchTargets",
+          "ObjectType": "workflow.TargetDataType",
+          "Properties": [
+            {
+              "ConnectorAttribute": "Name",
+              "DisplayAttributes": [
+                "Name",
+                "ObjectType",
+                "ClaimedByUserName"
+              ],
+              "ObjectType": "workflow.TargetProperty",
+              "Selector": "/api/v1/asset/Targets?$filter=TargetType eq NexusDevice",
+              "SelectorProperty": {
+                "Method": "GET",
+                "ObjectType": "workflow.SelectorProperty"
+              },
+              "SupportedObjects": [
+                "asset.Target"
+              ]
+            }
+          ],
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Enter Starting VLAN ID",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Start-VLAN-ID",
+          "Name": "StartVLAN",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "Max": 4094,
+              "Min": 1,
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "integer"
+          },
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Enter End VLAN ID",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "End-VLAN-ID",
+          "Name": "EndVLAN",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "Max": 4094,
+              "Min": 1,
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "integer"
+          },
+          "Required": true
+        }
+      ],
+      "InputParameterSet": [],
+      "Label": "Create VLANs on a Switch",
+      "Name": "CreatevLANOnSwitch",
+      "ObjectType": "workflow.WorkflowDefinition",
+      "OutputDefinition": [],
+      "Properties": {
+        "EnableDebug": true,
+        "ExternalMeta": true,
+        "ObjectType": "workflow.WorkflowProperties",
+        "SupportStatus": "Supported"
+      },
+      "SharedScope": "user",
+      "Tasks": [
+        {
+          "Description": "Start",
+          "Label": "Start",
+          "Name": "StartTask",
+          "NextTask": "CheckVLANInput",
+          "ObjectType": "workflow.StartTask"
+        },
+        {
+          "Condition": "${workflow.input.StartVLAN} <=  ${workflow.input.EndVLAN}",
+          "DecisionCases": [
+            {
+              "NextTask": "CreateVLANLoopTask",
+              "ObjectType": "workflow.DecisionCase",
+              "Value": "true"
+            },
+            {
+              "NextTask": "FailureEndTask",
+              "ObjectType": "workflow.DecisionCase",
+              "Value": "false"
+            }
+          ],
+          "DefaultTask": "FailureEndTask",
+          "Description": "VLAN Input Validation",
+          "Label": "Check VLAN Input",
+          "Name": "CheckVLANInput",
+          "ObjectType": "workflow.DecisionTask"
+        },
+        {
+          "Count": "{{len .global.workflow.input.SwitchTargets}}",
+          "Description": "Create VLAN Loop Task",
+          "Label": "Create VLAN Loop Task",
+          "LoopStartTask": "CreateVLANsonSwitch",
+          "Name": "CreateVLANLoopTask",
+          "NumberOfBatches": 1,
+          "ObjectType": "workflow.LoopTask",
+          "OnSuccess": "SuccessEndTask",
+          "Parallel": true
+        },
+        {
+          "CatalogMoid": "user",
+          "Description": "Create VLANs on Switch",
+          "InputParameters": {
+            "EndVLAN": "${workflow.input.EndVLAN}",
+            "StartVLAN": "${workflow.input.StartVLAN}",
+            "SwitchTarget": "{{index .global.workflow.input.SwitchTargets .iteration |ToJson}}"
+          },
+          "Label": "Create VLANs on Switch",
+          "Name": "CreateVLANsonSwitch",
+          "ObjectType": "workflow.WorkerTask",
+          "TaskDefinitionName": "CreateVLANsonSwitch",
+          "Version": 1
+        },
+        {
+          "Name": "SuccessEndTask",
+          "ObjectType": "workflow.SuccessEndTask"
+        },
+        {
+          "Name": "FailureEndTask",
+          "ObjectType": "workflow.FailureEndTask"
+        }
+      ],
+      "UiInputFilters": [],
+      "UiRenderingData": {
+        "Positions": [
+          {
+            "Name": "StartTask",
+            "X": 298.5,
+            "Y": 35
+          },
+          {
+            "Name": "CheckVLANInput",
+            "X": 213.5,
+            "Y": 106
+          },
+          {
+            "Name": "CreateVLANLoopTask",
+            "X": 178.5,
+            "Y": 194
+          },
+          {
+            "Name": "CreateVLANTask",
+            "X": 213.5,
+            "Y": 255
+          },
+          {
+            "Name": "ValidationLoopTask",
+            "X": 178.5,
+            "Y": 381
+          },
+          {
+            "Name": "VLANConfigQuery",
+            "X": 214,
+            "Y": 441
+          },
+          {
+            "Name": "SuccessEndTask",
+            "X": 298.5,
+            "Y": 380
+          },
+          {
+            "Name": "FailureEndTask",
+            "X": 440.5,
+            "Y": 380
+          },
+          {
+            "Name": "CreateVLANsonSwitch",
+            "X": 214,
+            "Y": 254
+          }
+        ]
+      },
+      "VariableDefinition": [],
+      "Version": 1
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/WorkflowDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.TaskDefinition",
+      "DefaultVersion": true,
+      "Description": "Remove NTP Servers from Switch",
+      "Label": "Remove NTP Servers From Switch",
+      "Name": "RemoveNTPServersFromSwitch",
+      "ObjectType": "workflow.TaskDefinition",
+      "Properties": {
+        "ExternalMeta": true,
+        "InputDefinition": [
+          {
+            "CustomDataTypeProperties": {
+              "CatalogMoid": "shared",
+              "ObjectType": "workflow.CustomDataProperty"
+            },
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "Switch Target to be configured",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Switch Target",
+            "Name": "SwitchTarget",
+            "ObjectType": "workflow.TargetDataType",
+            "Properties": [
+              {
+                "ConnectorAttribute": "Name",
+                "DisplayAttributes": [
+                  "Name",
+                  "ObjectType"
+                ],
+                "ObjectType": "workflow.TargetProperty",
+                "Selector": "/api/v1/asset/Targets?$filter=(TargetType eq HTTPEndpoint and Status eq Claimed)",
+                "SelectorProperty": {
+                  "Method": "GET",
+                  "ObjectType": "workflow.SelectorProperty"
+                },
+                "SupportedObjects": [
+                  "asset.Target"
+                ]
+              }
+            ],
+            "Required": true
+          },
+          {
+            "ArrayItemType": {
+              "ObjectType": "workflow.PrimitiveArrayItem",
+              "Properties": {
+                "Constraints": {
+                  "EnumList": [],
+                  "ObjectType": "workflow.Constraints",
+                  "Regex": "\\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\\.|$)){4}\\b"
+                },
+                "InventorySelector": [],
+                "ObjectType": "workflow.PrimitiveDataProperty",
+                "Type": "string"
+              }
+            },
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "List of NTP Servers to Added",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "NTP Servers",
+            "Max": 4,
+            "Min": 1,
+            "Name": "NTPServers",
+            "ObjectType": "workflow.ArrayDataType",
+            "Required": true
+          }
+        ],
+        "ObjectType": "workflow.Properties",
+        "OutputDefinition": [
+          {
+            "ArrayItemType": {
+              "ObjectType": "workflow.PrimitiveArrayItem",
+              "Properties": {
+                "Constraints": {
+                  "EnumList": [],
+                  "ObjectType": "workflow.Constraints"
+                },
+                "InventorySelector": [],
+                "ObjectType": "workflow.PrimitiveDataProperty",
+                "Type": "string"
+              }
+            },
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "Configured NTP Servers",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Configured NTP Servers",
+            "Max": 4,
+            "Name": "ConfiguredNTPServers",
+            "ObjectType": "workflow.ArrayDataType"
+          }
+        ],
+        "RetryCount": 3,
+        "RetryDelay": 10,
+        "RetryPolicy": "Fixed",
+        "SupportStatus": "Supported",
+        "Timeout": 600,
+        "TimeoutPolicy": "Timeout"
+      },
+      "RollbackTasks": [],
+      "SharedScope": "user",
+      "Version": 1
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/TaskDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.TaskDefinition",
+      "DefaultVersion": true,
+      "Description": "Add NTP Servers to Switch",
+      "Label": "Add NTP Servers to Switch",
+      "Name": "AddNTPServerstoSwitch",
+      "ObjectType": "workflow.TaskDefinition",
+      "Properties": {
+        "ExternalMeta": true,
+        "InputDefinition": [
+          {
+            "CustomDataTypeProperties": {
+              "CatalogMoid": "shared",
+              "ObjectType": "workflow.CustomDataProperty"
+            },
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "Switch Target to be configured",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Switch Target",
+            "Name": "SwitchTarget",
+            "ObjectType": "workflow.TargetDataType",
+            "Properties": [
+              {
+                "ConnectorAttribute": "Name",
+                "DisplayAttributes": [
+                  "Name",
+                  "ObjectType"
+                ],
+                "ObjectType": "workflow.TargetProperty",
+                "Selector": "/api/v1/asset/Targets?$filter=(TargetType eq HTTPEndpoint and Status eq Claimed)",
+                "SelectorProperty": {
+                  "Method": "GET",
+                  "ObjectType": "workflow.SelectorProperty"
+                },
+                "SupportedObjects": [
+                  "asset.Target"
+                ]
+              }
+            ],
+            "Required": true
+          },
+          {
+            "ArrayItemType": {
+              "ObjectType": "workflow.PrimitiveArrayItem",
+              "Properties": {
+                "Constraints": {
+                  "EnumList": [],
+                  "ObjectType": "workflow.Constraints",
+                  "Regex": "\\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\\.|$)){4}\\b"
+                },
+                "InventorySelector": [],
+                "ObjectType": "workflow.PrimitiveDataProperty",
+                "Type": "string"
+              }
+            },
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "List of NTP Servers to Added",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "NTP Servers",
+            "Max": 4,
+            "Min": 1,
+            "Name": "NTPServers",
+            "ObjectType": "workflow.ArrayDataType",
+            "Required": true
+          }
+        ],
+        "ObjectType": "workflow.Properties",
+        "OutputDefinition": [
+          {
+            "ArrayItemType": {
+              "ObjectType": "workflow.PrimitiveArrayItem",
+              "Properties": {
+                "Constraints": {
+                  "EnumList": [],
+                  "ObjectType": "workflow.Constraints"
+                },
+                "InventorySelector": [],
+                "ObjectType": "workflow.PrimitiveDataProperty",
+                "Type": "string"
+              }
+            },
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "Description": "Configured NTP Servers",
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Configured NTP Servers",
+            "Max": 4,
+            "Name": "ConfiguredNTPServers",
+            "ObjectType": "workflow.ArrayDataType"
+          }
+        ],
+        "RetryCount": 3,
+        "RetryDelay": 10,
+        "RetryPolicy": "Fixed",
+        "SupportStatus": "Supported",
+        "Timeout": 600,
+        "TimeoutPolicy": "Timeout"
+      },
+      "RollbackTasks": [
+        {
+          "CatalogMoid": "user",
+          "Description": "Remove NTP Servers from Switch",
+          "InputParameters": {
+            "NTPServers": "${task.input.NTPServers}",
+            "SwitchTarget": "${task.input.SwitchTarget}"
+          },
+          "Name": "RemoveNTPServersFromSwitch",
+          "ObjectType": "workflow.RollbackTask",
+          "Version": 1
+        }
+      ],
+      "SharedScope": "user",
+      "Version": 1
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/TaskDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.WorkflowDefinition",
+      "DefaultVersion": true,
+      "Description": "Configure NTP on Switches",
+      "InputDefinition": [
+        {
+          "CustomDataTypeProperties": {
+            "CatalogMoid": "shared",
+            "ObjectType": "workflow.CustomDataProperty"
+          },
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "List of Switch Targets to be configured",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "IsArray": true,
+          "Label": "Select Switch Devices",
+          "Max": 2,
+          "Min": 2,
+          "Name": "SwitchTargets",
+          "ObjectType": "workflow.TargetDataType",
+          "Properties": [
+            {
+              "ConnectorAttribute": "Name",
+              "DisplayAttributes": [
+                "Name",
+                "ObjectType",
+                "ClaimedByUserName"
+              ],
+              "ObjectType": "workflow.TargetProperty",
+              "Selector": "/api/v1/asset/Targets?$filter=TargetType eq NexusDevice",
+              "SelectorProperty": {
+                "Method": "GET",
+                "ObjectType": "workflow.SelectorProperty"
+              },
+              "SupportedObjects": [
+                "asset.Target"
+              ]
+            }
+          ],
+          "Required": true
+        },
+        {
+          "ArrayItemType": {
+            "ObjectType": "workflow.PrimitiveArrayItem",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [],
+                "ObjectType": "workflow.Constraints",
+                "Regex": "\\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\\.|$)){4}\\b"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "string"
+            }
+          },
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "NTP Servers to Added",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "NTP Servers",
+          "Max": 4,
+          "Min": 1,
+          "Name": "NTPServers",
+          "ObjectType": "workflow.ArrayDataType",
+          "Required": true
+        }
+      ],
+      "InputParameterSet": [],
+      "Label": "NTP Config",
+      "Name": "NTPConfig",
+      "ObjectType": "workflow.WorkflowDefinition",
+      "OutputDefinition": [],
+      "Properties": {
+        "ExternalMeta": true,
+        "ObjectType": "workflow.WorkflowProperties",
+        "SupportStatus": "Supported"
+      },
+      "SharedScope": "user",
+      "Tasks": [
+        {
+          "Name": "StartTask",
+          "NextTask": "NTPConfigLoop",
+          "ObjectType": "workflow.StartTask"
+        },
+        {
+          "Count": "{{len .global.workflow.input.SwitchTargets}}",
+          "Description": "NTP Config Loop Task",
+          "Label": "NTP Config Loop Task",
+          "LoopStartTask": "NTPConfigTask",
+          "Name": "NTPConfigLoop",
+          "NumberOfBatches": 1,
+          "ObjectType": "workflow.LoopTask",
+          "OnSuccess": "SuccessEndTask",
+          "Parallel": true
+        },
+        {
+          "CatalogMoid": "user",
+          "Description": "Add NTP Servers to Switch",
+          "InputParameters": {
+            "NTPServers": "${workflow.input.NTPServers}",
+            "SwitchTarget": "{{index .global.workflow.input.SwitchTargets .iteration |ToJson}}"
+          },
+          "Label": "Add NTP Servers to Switch",
+          "Name": "NTPConfigTask",
+          "ObjectType": "workflow.WorkerTask",
+          "TaskDefinitionName": "AddNTPServerstoSwitch",
+          "Version": 1
+        },
+        {
+          "Name": "SuccessEndTask",
+          "ObjectType": "workflow.SuccessEndTask"
+        },
+        {
+          "Name": "FailureEndTask",
+          "ObjectType": "workflow.FailureEndTask"
+        }
+      ],
+      "UiInputFilters": [],
+      "UiRenderingData": {
+        "Positions": [
+          {
+            "Name": "StartTask",
+            "X": 298.5,
+            "Y": 35
+          },
+          {
+            "Name": "NTPConfigLoop",
+            "X": 178.5,
+            "Y": 106
+          },
+          {
+            "Name": "NTPConfigTask",
+            "X": 214,
+            "Y": 166
+          },
+          {
+            "Name": "ValidationLoopTask",
+            "X": 178.5,
+            "Y": 292
+          },
+          {
+            "Name": "NTPPeerStatus",
+            "X": 214,
+            "Y": 352
+          },
+          {
+            "Name": "SuccessEndTask",
+            "X": 298.5,
+            "Y": 478
+          },
+          {
+            "Name": "FailureEndTask",
+            "X": 440.5,
+            "Y": 478
+          }
+        ]
+      },
+      "VariableDefinition": [],
+      "Version": 1
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/WorkflowDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.TaskDefinition",
+      "DefaultVersion": true,
+      "Description": "Pauses the current workflow for the specified duration.",
+      "Label": "Sleep Task",
+      "Name": "InvokeSleepTask",
+      "ObjectType": "workflow.TaskDefinition",
+      "Properties": {
+        "ExternalMeta": true,
+        "InputDefinition": [
+          {
+            "Default": {
+              "ObjectType": "workflow.DefaultValue"
+            },
+            "DisplayMeta": {
+              "InventorySelector": true,
+              "ObjectType": "workflow.DisplayMeta",
+              "WidgetType": "None"
+            },
+            "Label": "Sleep Time in Seconds",
+            "Name": "SleepTimeInSec",
+            "ObjectType": "workflow.PrimitiveDataType",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [],
+                "Max": 600,
+                "Min": 1,
+                "ObjectType": "workflow.Constraints"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "integer"
+            },
+            "Required": true
+          }
+        ],
+        "ObjectType": "workflow.Properties",
+        "OutputDefinition": [],
+        "RetryCount": 3,
+        "RetryDelay": 60,
+        "RetryPolicy": "Fixed",
+        "SupportStatus": "Supported",
+        "Timeout": 600,
+        "TimeoutPolicy": "Timeout"
+      },
+      "RollbackTasks": [],
+      "SharedScope": "shared",
+      "Tags": [
+        {
+          "Key": "category",
+          "Value": "CoreTasks"
+        }
+      ],
+      "Version": 1
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/TaskDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.WorkflowDefinition",
+      "DefaultVersion": true,
+      "Description": "Configure VPC on Switchs",
+      "InputDefinition": [
+        {
+          "CustomDataTypeProperties": {
+            "CatalogMoid": "shared",
+            "ObjectType": "workflow.CustomDataProperty"
+          },
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "List of Switch Targets to be configured",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "IsArray": true,
+          "Label": "Select Switch Devices",
+          "Max": 2,
+          "Min": 2,
+          "Name": "SwitchTargets",
+          "ObjectType": "workflow.TargetDataType",
+          "Properties": [
+            {
+              "ConnectorAttribute": "Name",
+              "DisplayAttributes": [
+                "Name",
+                "ObjectType",
+                "ClaimedByUserName"
+              ],
+              "ObjectType": "workflow.TargetProperty",
+              "Selector": "/api/v1/asset/Targets?$filter=TargetType eq NexusDevice",
+              "SelectorProperty": {
+                "Method": "GET",
+                "ObjectType": "workflow.SelectorProperty"
+              },
+              "SupportedObjects": [
+                "asset.Target"
+              ]
+            }
+          ],
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Enter vPC Domain ID",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "vPC Domain",
+          "Name": "vPCDomain",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "Max": 1000,
+              "Min": 1,
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "integer"
+          },
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Enter Peer Link Interfaces to be used for vPC. It can be single interface OR a range, viz Ethernet 1/1-5.",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "vPC Peer Link Interface",
+          "Name": "PLInt",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "ObjectType": "workflow.Constraints",
+              "Regex": "Ethernet \\d+\\/(\\d+$|\\d+-\\d+$)"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "string"
+          },
+          "Required": true
+        }
+      ],
+      "InputParameterSet": [],
+      "Label": "VPC Config",
+      "Name": "VPCConfig",
+      "ObjectType": "workflow.WorkflowDefinition",
+      "OutputDefinition": [],
+      "Properties": {
+        "EnableDebug": true,
+        "ExternalMeta": true,
+        "ObjectType": "workflow.WorkflowProperties",
+        "SupportStatus": "Supported"
+      },
+      "SharedScope": "user",
+      "Tasks": [
+        {
+          "Name": "StartTask",
+          "NextTask": "MgmtIPLoop",
+          "ObjectType": "workflow.StartTask"
+        },
+        {
+          "Count": "{{len .global.workflow.input.SwitchTargets}}",
+          "Description": "Management IP Loop Task",
+          "Label": "Management IP Loop Task",
+          "LoopStartTask": "SwitchMgmtIP",
+          "Name": "MgmtIPLoop",
+          "NumberOfBatches": 1,
+          "ObjectType": "workflow.LoopTask",
+          "OnSuccess": "vPCConfigSwitchA",
+          "Parallel": true
+        },
+        {
+          "CatalogMoid": "shared",
+          "Description": "Get Switch IP",
+          "InputParameters": {
+            "ContentType": "json",
+            "Method": "GET",
+            "Protocol": "https",
+            "ResponseParser": {
+              "Parameters": [
+                {
+                  "Name": "ManagementIP",
+                  "Path": "$.Connections[0].ManagementAddress",
+                  "Type": "string"
+                }
+              ]
+            },
+            "Url": "/v1/asset/Targets/{{(index .global.workflow.input.SwitchTargets .iteration).Moid}}"
+          },
+          "Label": "Get Management IP on Switch",
+          "Name": "SwitchMgmtIP",
+          "ObjectType": "workflow.WorkerTask",
+          "TaskDefinitionName": "InvokeGenericWebApi",
+          "Version": 1
+        },
+        {
+          "CatalogMoid": "shared",
+          "Description": "Configure vPC on Switch-A",
+          "InputParameters": {
+            "Body": {
+              "ContentType": "json",
+              "Text": "{\n  \"ins_api\": {\n    \"version\": \"1.0\",\n    \"type\": \"cli_conf\",\n    \"chunk\": \"0\",\n    \"sid\": \"sid\",\n    \"input\": \"vpc domain {{.global.workflow.input.vPCDomain}} ;{{$source := (index .global.SwitchMgmtIP.output.Parameters 0).ManagementIP}}{{$destination := (index .global.SwitchMgmtIP.output.Parameters 1).ManagementIP}}peer-keepalive destination {{$destination}} source {{$source}}  ;peer-gateway ;auto-recovery ;interface port-channel {{.global.workflow.input.vPCDomain}} ;description VPC Port Channel ;switchport mode trunk ;spanning-tree port type network ;vpc peer-link ;interface {{.global.workflow.input.PLInt}} ;description VPC Peer links ;switchport mode trunk ;channel-group {{.global.workflow.input.vPCDomain}} mode active\",\n    \"output_format\": \"json\"\n  }\n}"
+            },
+            "ContentType": "json",
+            "Method": "POST",
+            "Protocol": "https",
+            "ResponseParser": {
+              "Parameters": [
+                {
+                  "Name": "http_status_code",
+                  "Path": "$.ins_api.outputs.output[:].code",
+                  "Type": "integer"
+                }
+              ]
+            },
+            "Target": "{{index .global.workflow.input.SwitchTargets 0 |ToJson}}",
+            "Url": "/ins"
+          },
+          "Label": "Configure vPC on Switch A",
+          "Name": "vPCConfigSwitchA",
+          "ObjectType": "workflow.WorkerTask",
+          "OnSuccess": "vPCConfigSwitchB",
+          "TaskDefinitionName": "InvokeGenericWebApi",
+          "Version": 1
+        },
+        {
+          "CatalogMoid": "shared",
+          "Description": "Configure vPC on Switch-B",
+          "InputParameters": {
+            "Body": {
+              "ContentType": "json",
+              "Text": "{\n  \"ins_api\": {\n    \"version\": \"1.0\",\n    \"type\": \"cli_conf\",\n    \"chunk\": \"0\",\n    \"sid\": \"sid\",\n    \"input\": \"vpc domain {{.global.workflow.input.vPCDomain}} ;{{$source := (index .global.SwitchMgmtIP.output.Parameters 1).ManagementIP}}{{$destination := (index .global.SwitchMgmtIP.output.Parameters 0).ManagementIP}}peer-keepalive destination {{$destination}} source {{$source}}  ;peer-gateway ;auto-recovery ;interface port-channel {{.global.workflow.input.vPCDomain}} ;description VPC Port Channel ;switchport mode trunk ;spanning-tree port type network ;vpc peer-link ;interface {{.global.workflow.input.PLInt}} ;description VPC Peer links ;switchport mode trunk ;channel-group {{.global.workflow.input.vPCDomain}} mode active\",\n    \"output_format\": \"json\"\n  }\n}"
+            },
+            "ContentType": "json",
+            "Method": "POST",
+            "Protocol": "https",
+            "ResponseParser": {
+              "Parameters": [
+                {
+                  "Name": "http_status_code",
+                  "Path": "$.ins_api.outputs.output[:].code",
+                  "Type": "integer"
+                }
+              ]
+            },
+            "Target": "{{index .global.workflow.input.SwitchTargets 1 |ToJson}}",
+            "Url": "/ins"
+          },
+          "Label": "Configure vPC on Switch B",
+          "Name": "vPCConfigSwitchB",
+          "ObjectType": "workflow.WorkerTask",
+          "OnSuccess": "VPCConfigWait",
+          "TaskDefinitionName": "InvokeGenericWebApi",
+          "Version": 1
+        },
+        {
+          "CatalogMoid": "shared",
+          "Description": "InvokeSleepTask",
+          "InputParameters": {
+            "SleepTimeInSec": 30
+          },
+          "Label": "Wait for VPC Configuration",
+          "Name": "VPCConfigWait",
+          "ObjectType": "workflow.WorkerTask",
+          "OnSuccess": "VPCConfigValidationLoop",
+          "TaskDefinitionName": "InvokeSleepTask",
+          "Version": 1
+        },
+        {
+          "Count": "{{len .global.workflow.input.SwitchTargets}}",
+          "Description": "VPC Config Validation Loop Task",
+          "Label": "VPC Config Validation Loop Task",
+          "LoopStartTask": "VPCConfigValidation",
+          "Name": "VPCConfigValidationLoop",
+          "NumberOfBatches": 1,
+          "ObjectType": "workflow.LoopTask",
+          "OnSuccess": "SuccessEndTask",
+          "Parallel": true
+        },
+        {
+          "CatalogMoid": "shared",
+          "Description": "VPC Config Validation",
+          "InputParameters": {
+            "Body": {
+              "ContentType": "json",
+              "Text": "{\n  \"ins_api\": {\n    \"version\": \"1.0\",\n    \"type\": \"cli_show\",\n    \"chunk\": \"0\",\n    \"sid\": \"sid\",\n    \"input\": \"show vpc brief\",\n    \"output_format\": \"json\"\n  }\n}"
+            },
+            "ContentType": "json",
+            "Method": "POST",
+            "Outcomes": [
+              {
+                "Condition": "{{ne (index .local.response.vpc_peer_status 0) `peer-ok`}}",
+                "Message": "Peer Status Check Failed",
+                "Name": "VPC Peer Status Check",
+                "Type": "Error"
+              },
+              {
+                "Condition": "{{ne (index .local.response.vpc_peer_keepalive_status 0) `peer-alive`}}",
+                "Message": "Peer Keepalive Status Check Failed",
+                "Name": "VPC Peer Keepalive Status Check",
+                "Type": "Error"
+              },
+              {
+                "Condition": "{{ne (Itoa (index .local.response.peer_link_port_state 0)) `1`}}",
+                "Message": "Peer Link Port Status Check Failed",
+                "Name": "Peer Link Port Status Check",
+                "Type": "Error"
+              }
+            ],
+            "Protocol": "https",
+            "ResponseParser": {
+              "Parameters": [
+                {
+                  "Name": "vpc_peer_status",
+                  "Path": "$..body[\"vpc-peer-status\"]",
+                  "Type": "string"
+                },
+                {
+                  "Name": "vpc_peer_keepalive_status",
+                  "Path": "$..body[\"vpc-peer-keepalive-status\"]",
+                  "Type": "string"
+                },
+                {
+                  "Name": "peer_link_port_state",
+                  "Path": "$..ROW_peerlink[\"peer-link-port-state\"]",
+                  "Type": "string"
+                }
+              ]
+            },
+            "Target": "{{index .global.workflow.input.SwitchTargets .iteration |ToJson}}",
+            "Url": "/ins"
+          },
+          "Label": "Validate vPC Configs on Switchs",
+          "Name": "VPCConfigValidation",
+          "ObjectType": "workflow.WorkerTask",
+          "TaskDefinitionName": "InvokeGenericWebApi",
+          "Version": 1
+        },
+        {
+          "Name": "SuccessEndTask",
+          "ObjectType": "workflow.SuccessEndTask"
+        },
+        {
+          "Name": "FailureEndTask",
+          "ObjectType": "workflow.FailureEndTask"
+        }
+      ],
+      "UiInputFilters": [],
+      "UiRenderingData": {
+        "Positions": [
+          {
+            "Name": "StartTask",
+            "X": 273.5,
+            "Y": 35.5
+          },
+          {
+            "Name": "MgmtIPLoop",
+            "X": 178.5,
+            "Y": 107
+          },
+          {
+            "Name": "SwitchMgmtIP",
+            "X": 188.50000000000003,
+            "Y": 198
+          },
+          {
+            "Name": "vPCConfigSwitchA",
+            "X": 188.5,
+            "Y": 314
+          },
+          {
+            "Name": "vPCConfigSwitchB",
+            "X": 188.5,
+            "Y": 402
+          },
+          {
+            "Name": "VPCConfigWait",
+            "X": 188.5,
+            "Y": 490
+          },
+          {
+            "Name": "VPCConfigValidationLoop",
+            "X": 178.5,
+            "Y": 578
+          },
+          {
+            "Name": "VPCConfigValidation",
+            "X": 188.50000000000003,
+            "Y": 669
+          },
+          {
+            "Name": "SuccessEndTask",
+            "X": 273.5,
+            "Y": 785
+          },
+          {
+            "Name": "FailureEndTask",
+            "X": 416.5,
+            "Y": 785
+          }
+        ]
+      },
+      "VariableDefinition": [],
+      "Version": 1
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/WorkflowDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.WorkflowDefinition",
+      "DefaultVersion": true,
+      "Description": "Configure PO with vPC on FI Connections",
+      "InputDefinition": [
+        {
+          "CustomDataTypeProperties": {
+            "CatalogMoid": "shared",
+            "ObjectType": "workflow.CustomDataProperty"
+          },
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "List of Switch Targets to be configured",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "IsArray": true,
+          "Label": "Select Switch Devices",
+          "Max": 2,
+          "Min": 2,
+          "Name": "SwitchTargets",
+          "ObjectType": "workflow.TargetDataType",
+          "Properties": [
+            {
+              "ConnectorAttribute": "Name",
+              "DisplayAttributes": [
+                "Name",
+                "ObjectType",
+                "ClaimedByUserName"
+              ],
+              "ObjectType": "workflow.TargetProperty",
+              "Selector": "/api/v1/asset/Targets?$filter=TargetType eq NexusDevice",
+              "SelectorProperty": {
+                "Method": "GET",
+                "ObjectType": "workflow.SelectorProperty"
+              },
+              "SupportedObjects": [
+                "asset.Target"
+              ]
+            }
+          ],
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Enter vPC Domain ID for PO connection to FI-A",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "vPC Domain ID for FI-A",
+          "Name": "vPCFIA",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "Max": 1000,
+              "Min": 1,
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "integer"
+          },
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Enter Interface ID used in port-channel to FIs. It can be a single interface viz Ethernet 1/1 OR a range of interfaces viz Ethernet 1/1-5",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Interface IDs for Port Channel to FI-A",
+          "Name": "POINTF1",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "ObjectType": "workflow.Constraints",
+              "Regex": "Ethernet \\d+\\/(\\d+$|\\d+-\\d+$)"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "string"
+          },
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Enter vPC Domain ID for PO connection to FI-B",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "vPC Domain ID for FI-B",
+          "Name": "vPCFIB",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "Max": 1000,
+              "Min": 1,
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "integer"
+          },
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Enter Interface ID used in port-channel to FIs. It can be a single interface viz Ethernet 1/1 OR a range of interfaces viz Ethernet 1/1-5",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Interface IDs for Port Channel to FI-B",
+          "Name": "POINTF2",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "ObjectType": "workflow.Constraints",
+              "Regex": "Ethernet \\d+\\/(\\d+$|\\d+-\\d+$)"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "string"
+          },
+          "Required": true
+        }
+      ],
+      "InputParameterSet": [],
+      "Label": "Port-Channel with vPC Config for FIs",
+      "Name": "PortChannelForFIs",
+      "ObjectType": "workflow.WorkflowDefinition",
+      "OutputDefinition": [],
+      "Properties": {
+        "EnableDebug": true,
+        "ExternalMeta": true,
+        "ObjectType": "workflow.WorkflowProperties",
+        "SupportStatus": "Supported"
+      },
+      "SharedScope": "user",
+      "Tasks": [
+        {
+          "Name": "StartTask",
+          "NextTask": "InputValidation",
+          "ObjectType": "workflow.StartTask"
+        },
+        {
+          "Condition": "(${workflow.input.vPCFIA} != ${workflow.input.vPCFIB}) && (${workflow.input.POINTF1} != ${workflow.input.POINTF2})",
+          "DecisionCases": [
+            {
+              "NextTask": "PCConfigLoop",
+              "ObjectType": "workflow.DecisionCase",
+              "Value": "true"
+            },
+            {
+              "NextTask": "FailureEndTask",
+              "ObjectType": "workflow.DecisionCase",
+              "Value": "false"
+            }
+          ],
+          "DefaultTask": "FailureEndTask",
+          "Description": "Validate inputs",
+          "Label": "Input Validation",
+          "Name": "InputValidation",
+          "ObjectType": "workflow.DecisionTask"
+        },
+        {
+          "Count": "{{len .global.workflow.input.SwitchTargets}}",
+          "Description": "PC Config Loop Task",
+          "Label": "PC Config Loop Task",
+          "LoopStartTask": "PCConfigFIs",
+          "Name": "PCConfigLoop",
+          "NumberOfBatches": 1,
+          "ObjectType": "workflow.LoopTask",
+          "OnSuccess": "PCConfigWait",
+          "Parallel": true
+        },
+        {
+          "CatalogMoid": "shared",
+          "Description": "Port Channel Configs for FIs",
+          "InputParameters": {
+            "Body": {
+              "ContentType": "json",
+              "Text": "{\n  \"ins_api\": {\n    \"version\": \"1.0\",\n    \"type\": \"cli_conf\",\n    \"chunk\": \"0\",\n    \"sid\": \"sid\",\n    \"input\": \"interface port-channel {{.global.workflow.input.vPCFIA}} ;description FlexPodXCS IMM FI Port Channel ;switchport mode trunk ;vpc {{.global.workflow.input.vPCFIA}} ;interface port-channel {{.global.workflow.input.vPCFIB}} ;description FlexPodXCS IMM FI Port Channel ;switchport mode trunk ;vpc {{.global.workflow.input.vPCFIB}} ;interface {{.global.workflow.input.POINTF1}} ;description PO-VPC links to FlexPodXCS IMM FIs ;switchport mode trunk ;channel-group {{.global.workflow.input.vPCFIA}} mode active ;interface {{.global.workflow.input.POINTF2}} ;description PO-VPC links to FlexPodXCS IMM FIs ;switchport mode trunk ;channel-group {{.global.workflow.input.vPCFIB}} mode active\",\n    \"output_format\": \"json\"\n  }\n}"
+            },
+            "ContentType": "json",
+            "Method": "POST",
+            "Protocol": "https",
+            "ResponseParser": {
+              "Parameters": [
+                {
+                  "Name": "http_status_code",
+                  "Path": "$.ins_api.outputs.output[:].code",
+                  "Type": "integer"
+                },
+                {
+                  "Name": "message",
+                  "Path": "$.ins_api.outputs.output[:].msg",
+                  "Type": "string"
+                }
+              ]
+            },
+            "Target": "{{index .global.workflow.input.SwitchTargets .iteration |ToJson}}",
+            "Url": "/ins"
+          },
+          "Label": "Port Channel Configs for FIs",
+          "Name": "PCConfigFIs",
+          "ObjectType": "workflow.WorkerTask",
+          "TaskDefinitionName": "InvokeGenericWebApi",
+          "Version": 1
+        },
+        {
+          "CatalogMoid": "shared",
+          "Description": "InvokeSleepTask",
+          "InputParameters": {
+            "SleepTimeInSec": 30
+          },
+          "Label": "Wait for PC Configuration",
+          "Name": "PCConfigWait",
+          "ObjectType": "workflow.WorkerTask",
+          "OnSuccess": "PCConfigValidationLoop",
+          "TaskDefinitionName": "InvokeSleepTask",
+          "Version": 1
+        },
+        {
+          "Count": "{{len .global.workflow.input.SwitchTargets}}",
+          "Description": "PC Config Validation Loop Task",
+          "Label": "PC Config Validation Loop Task",
+          "LoopStartTask": "PCConfigValidation",
+          "Name": "PCConfigValidationLoop",
+          "NumberOfBatches": 1,
+          "ObjectType": "workflow.LoopTask",
+          "OnSuccess": "SuccessEndTask",
+          "Parallel": true
+        },
+        {
+          "CatalogMoid": "shared",
+          "Description": "PC Config Validation",
+          "InputParameters": {
+            "Body": {
+              "ContentType": "json",
+              "Text": "{\n  \"ins_api\": {\n    \"version\": \"1.0\",\n    \"type\": \"cli_show\",\n    \"chunk\": \"0\",\n    \"sid\": \"sid\",\n    \"input\": \"show port-channel summary\",\n    \"output_format\": \"json\"\n  }\n}"
+            },
+            "ContentType": "json",
+            "Method": "POST",
+            "Outcomes": [
+              {
+                "Condition": "{{or (ne (index .local.response.pc_layer 0) `S`) (ne (index .local.response.pc_layer 1) `S`) }}",
+                "Message": "PC Layer Check Failed",
+                "Name": "PC Layer Check",
+                "Type": "Error"
+              },
+              {
+                "Condition": "{{or (ne (index .local.response.pc_status 0) `U`) (ne (index .local.response.pc_status 1) `U`) }}",
+                "Message": "PC Status Check Failed",
+                "Name": "PC Status Check",
+                "Type": "Error"
+              },
+              {
+                "Condition": "{{or (ne (index .local.response.pc_port_status 0) `P`) (ne (index .local.response.pc_port_status 1) `P`) }}",
+                "Message": "PC Port Status Check Failed",
+                "Name": "PC Port Status Check",
+                "Type": "Error"
+              }
+            ],
+            "Protocol": "https",
+            "ResponseParser": {
+              "Parameters": [
+                {
+                  "Name": "pc_layer",
+                  "Path": "$..ROW_channel[1,2][\"layer\"]",
+                  "Type": "string"
+                },
+                {
+                  "Name": "pc_status",
+                  "Path": "$..ROW_channel[1,2][\"status\"]",
+                  "Type": "string"
+                },
+                {
+                  "Name": "pc_port_status",
+                  "Path": "$..ROW_channel[1,2].TABLE_member.ROW_member[\"port-status\"]",
+                  "Type": "string"
+                }
+              ]
+            },
+            "Target": "{{index .global.workflow.input.SwitchTargets .iteration |ToJson}}",
+            "Url": "/ins"
+          },
+          "Label": "Validate PC Configs on Switchs",
+          "Name": "PCConfigValidation",
+          "ObjectType": "workflow.WorkerTask",
+          "TaskDefinitionName": "InvokeGenericWebApi",
+          "Version": 1
+        },
+        {
+          "Name": "SuccessEndTask",
+          "ObjectType": "workflow.SuccessEndTask"
+        },
+        {
+          "Name": "FailureEndTask",
+          "ObjectType": "workflow.FailureEndTask"
+        }
+      ],
+      "UiInputFilters": [],
+      "UiRenderingData": {
+        "Positions": [
+          {
+            "Name": "StartTask",
+            "X": 273.5,
+            "Y": 35
+          },
+          {
+            "Name": "InputValidation",
+            "X": 188.5,
+            "Y": 106
+          },
+          {
+            "Name": "PCConfigLoop",
+            "X": 178.5,
+            "Y": 194
+          },
+          {
+            "Name": "PCConfigFIs",
+            "X": 188.5,
+            "Y": 285
+          },
+          {
+            "Name": "PCConfigWait",
+            "X": 188.5,
+            "Y": 401
+          },
+          {
+            "Name": "PCConfigValidationLoop",
+            "X": 178.5,
+            "Y": 489
+          },
+          {
+            "Name": "PCConfigValidation",
+            "X": 188.5,
+            "Y": 580
+          },
+          {
+            "Name": "SuccessEndTask",
+            "X": 273.5,
+            "Y": 696
+          },
+          {
+            "Name": "FailureEndTask",
+            "X": 415.5,
+            "Y": 696
+          }
+        ]
+      },
+      "VariableDefinition": [],
+      "Version": 1
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/WorkflowDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "ClassId": "workflow.WorkflowDefinition",
+      "DefaultVersion": true,
+      "Description": "Uber Workflow to configure N9K devices for FlexPodXCS",
+      "InputDefinition": [
+        {
+          "CustomDataTypeProperties": {
+            "CatalogMoid": "shared",
+            "ObjectType": "workflow.CustomDataProperty"
+          },
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "List of Switch Targets to be configured",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "IsArray": true,
+          "Label": "Select Switch Devices",
+          "Max": 2,
+          "Min": 2,
+          "Name": "SwitchTargets",
+          "ObjectType": "workflow.TargetDataType",
+          "Properties": [
+            {
+              "ConnectorAttribute": "Name",
+              "DisplayAttributes": [
+                "Name",
+                "ObjectType",
+                "ClaimedByUserName"
+              ],
+              "ObjectType": "workflow.TargetProperty",
+              "Selector": "/api/v1/asset/Targets?$filter=TargetType eq NexusDevice",
+              "SelectorProperty": {
+                "Method": "GET",
+                "ObjectType": "workflow.SelectorProperty"
+              },
+              "SupportedObjects": [
+                "asset.Target"
+              ]
+            }
+          ],
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Enter Starting VLAN ID",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Start-VLAN-ID",
+          "Name": "StartVLAN",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "Max": 4094,
+              "Min": 1,
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "integer"
+          },
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Enter End VLAN ID",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "End-VLAN-ID",
+          "Name": "EndVLAN",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "Max": 4094,
+              "Min": 1,
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "integer"
+          },
+          "Required": true
+        },
+        {
+          "ArrayItemType": {
+            "ObjectType": "workflow.PrimitiveArrayItem",
+            "Properties": {
+              "Constraints": {
+                "EnumList": [],
+                "ObjectType": "workflow.Constraints",
+                "Regex": "\\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\\.|$)){4}\\b"
+              },
+              "InventorySelector": [],
+              "ObjectType": "workflow.PrimitiveDataProperty",
+              "Type": "string"
+            }
+          },
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "NTP Servers to Added",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "NTP Servers",
+          "Max": 4,
+          "Min": 1,
+          "Name": "NTPServers",
+          "ObjectType": "workflow.ArrayDataType",
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Enter vPC Domain ID",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "vPC Domain",
+          "Name": "vPCDomain",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "Max": 1000,
+              "Min": 1,
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "integer"
+          },
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Enter Peer Link Interfaces to be used for vPC. It can be single interface OR a range, viz Ethernet 1/1-5.",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "vPC Peer Link Interface",
+          "Name": "PLInt",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "ObjectType": "workflow.Constraints",
+              "Regex": "Ethernet \\d+\\/(\\d+$|\\d+-\\d+$)"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "string"
+          },
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Enter vPC Domain ID for PO connection to FI-A",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "vPC Domain ID for FI-A",
+          "Name": "vPCFIA",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "Max": 1000,
+              "Min": 1,
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "integer"
+          },
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Enter Interface ID used in port-channel to FIs. It can be a single interface viz Ethernet 1/1 OR a range of interfaces viz Ethernet 1/1-5",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Interface IDs for Port Channel to FI-A",
+          "Name": "POINTF1",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "ObjectType": "workflow.Constraints",
+              "Regex": "Ethernet \\d+\\/(\\d+$|\\d+-\\d+$)"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "string"
+          },
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Enter vPC Domain ID for PO connection to FI-B",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "vPC Domain ID for FI-B",
+          "Name": "vPCFIB",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "Max": 1000,
+              "Min": 1,
+              "ObjectType": "workflow.Constraints"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "integer"
+          },
+          "Required": true
+        },
+        {
+          "Default": {
+            "ObjectType": "workflow.DefaultValue"
+          },
+          "Description": "Enter Interface ID used in port-channel to FIs. It can be a single interface viz Ethernet 1/1 OR a range of interfaces viz Ethernet 1/1-5",
+          "DisplayMeta": {
+            "InventorySelector": true,
+            "ObjectType": "workflow.DisplayMeta",
+            "WidgetType": "None"
+          },
+          "Label": "Interface IDs for Port Channel to FI-B",
+          "Name": "POINTF2",
+          "ObjectType": "workflow.PrimitiveDataType",
+          "Properties": {
+            "Constraints": {
+              "EnumList": [],
+              "ObjectType": "workflow.Constraints",
+              "Regex": "Ethernet \\d+\\/(\\d+$|\\d+-\\d+$)"
+            },
+            "InventorySelector": [],
+            "ObjectType": "workflow.PrimitiveDataProperty",
+            "Type": "string"
+          },
+          "Required": true
+        }
+      ],
+      "InputParameterSet": [],
+      "Label": "FlexPod N9K Uber Configuration",
+      "Name": "FlexPod_N9K_Uber_Configuration",
+      "ObjectType": "workflow.WorkflowDefinition",
+      "OutputDefinition": [],
+      "Properties": {
+        "EnableDebug": true,
+        "ExternalMeta": true,
+        "ObjectType": "workflow.WorkflowProperties",
+        "SupportStatus": "Supported"
+      },
+      "SharedScope": "user",
+      "Tasks": [
+        {
+          "Name": "StartTask",
+          "NextTask": "FeatureEnablementSWF",
+          "ObjectType": "workflow.StartTask"
+        },
+        {
+          "CatalogMoid": "user",
+          "Description": "N9K Feature Enablement",
+          "InputParameters": {
+            "SwitchTargets": "{{.global.workflow.input.SwitchTargets | ToJson}}"
+          },
+          "Label": "Feature Enablement",
+          "Name": "FeatureEnablementSWF",
+          "ObjectType": "workflow.SubWorkflowTask",
+          "OnFailure": "FailureEndTask",
+          "OnSuccess": "GlobalSettings",
+          "Version": 1,
+          "WorkflowDefinitionName": "FeatureEnablement"
+        },
+        {
+          "CatalogMoid": "user",
+          "Description": "SPT & LB Configs",
+          "InputParameters": {
+            "SwitchTargets": "{{.global.workflow.input.SwitchTargets | ToJson}}"
+          },
+          "Label": "SPT & LB Configs",
+          "Name": "GlobalSettings",
+          "ObjectType": "workflow.SubWorkflowTask",
+          "OnFailure": "FailureEndTask",
+          "OnSuccess": "CreatevLAN",
+          "Version": 1,
+          "WorkflowDefinitionName": "GlobalSettings"
+        },
+        {
+          "CatalogMoid": "user",
+          "Description": "vLan Configs",
+          "InputParameters": {
+            "EndVLAN": "{{.global.workflow.input.EndVLAN}}",
+            "StartVLAN": "{{.global.workflow.input.StartVLAN}}",
+            "SwitchTargets": "{{.global.workflow.input.SwitchTargets | ToJson}}"
+          },
+          "Label": "vLan Configs",
+          "Name": "CreatevLAN",
+          "ObjectType": "workflow.SubWorkflowTask",
+          "OnFailure": "FailureEndTask",
+          "OnSuccess": "NTPConfig",
+          "Version": 1,
+          "WorkflowDefinitionName": "CreatevLANOnSwitch"
+        },
+        {
+          "CatalogMoid": "user",
+          "Description": "NTP Configs",
+          "InputParameters": {
+            "NTPServers": "{{.global.workflow.input.NTPServers | ToJson}}",
+            "SwitchTargets": "{{.global.workflow.input.SwitchTargets | ToJson}}"
+          },
+          "Label": "NTP Configs",
+          "Name": "NTPConfig",
+          "ObjectType": "workflow.SubWorkflowTask",
+          "OnFailure": "FailureEndTask",
+          "OnSuccess": "VPCConfig",
+          "Version": 1,
+          "WorkflowDefinitionName": "NTPConfig"
+        },
+        {
+          "CatalogMoid": "user",
+          "Description": "vPC Configs",
+          "InputParameters": {
+            "PLInt": "{{.global.workflow.input.PLInt}}",
+            "SwitchTargets": "{{.global.workflow.input.SwitchTargets | ToJson}}",
+            "vPCDomain": "{{.global.workflow.input.vPCDomain}}"
+          },
+          "Label": "vPC Configs",
+          "Name": "VPCConfig",
+          "ObjectType": "workflow.SubWorkflowTask",
+          "OnFailure": "FailureEndTask",
+          "OnSuccess": "PortChannelForFIs",
+          "Version": 1,
+          "WorkflowDefinitionName": "VPCConfig"
+        },
+        {
+          "CatalogMoid": "user",
+          "Description": "Configure PO with vPC on FI Connections",
+          "InputParameters": {
+            "POINTF1": "{{.global.workflow.input.POINTF1}}",
+            "POINTF2": "{{.global.workflow.input.POINTF2}}",
+            "SwitchTargets": "{{.global.workflow.input.SwitchTargets | ToJson}}",
+            "vPCFIA": "{{.global.workflow.input.vPCFIA}}",
+            "vPCFIB": "{{.global.workflow.input.vPCFIB}}"
+          },
+          "Label": "Port-Channel with vPC Config for FIs",
+          "Name": "PortChannelForFIs",
+          "ObjectType": "workflow.SubWorkflowTask",
+          "OnFailure": "FailureEndTask",
+          "OnSuccess": "SuccessEndTask",
+          "Version": 1,
+          "WorkflowDefinitionName": "PortChannelForFIs"
+        },
+        {
+          "Name": "SuccessEndTask",
+          "ObjectType": "workflow.SuccessEndTask"
+        },
+        {
+          "Name": "FailureEndTask",
+          "ObjectType": "workflow.FailureEndTask"
+        }
+      ],
+      "UiInputFilters": [],
+      "UiRenderingData": {
+        "Positions": [
+          {
+            "Name": "StartTask",
+            "X": 263,
+            "Y": 35
+          },
+          {
+            "Name": "FeatureEnablementSWF",
+            "X": 178,
+            "Y": 106
+          },
+          {
+            "Name": "SuccessEndTask",
+            "X": 263,
+            "Y": 634
+          },
+          {
+            "Name": "FailureEndTask",
+            "X": 405,
+            "Y": 634
+          },
+          {
+            "Name": "CreatevLANOnN9K",
+            "X": 178,
+            "Y": 282
+          },
+          {
+            "Name": "N9KNTPConfig",
+            "X": 178,
+            "Y": 370
+          },
+          {
+            "Name": "N9KVPCConfig",
+            "X": 178,
+            "Y": 458
+          },
+          {
+            "Name": "N9KPortChannelForFIs",
+            "X": 178,
+            "Y": 546
+          },
+          {
+            "Name": "N9KGlobalSettings",
+            "X": 178,
+            "Y": 194
+          },
+          {
+            "Name": "GlobalSettings",
+            "X": 178,
+            "Y": 194
+          },
+          {
+            "Name": "CreatevLAN",
+            "X": 178,
+            "Y": 282
+          },
+          {
+            "Name": "NTPConfig",
+            "X": 178,
+            "Y": 370
+          },
+          {
+            "Name": "VPCConfig",
+            "X": 178,
+            "Y": 458
+          },
+          {
+            "Name": "PortChannelForFIs",
+            "X": 178,
+            "Y": 546
+          }
+        ]
+      },
+      "VariableDefinition": [],
+      "Version": 1
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/WorkflowDefinitions",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "Batch": [
+        {
+          "Body": "{{- if index .global.task.input \"Body\" -}}\n  {{.global.task.input.Body.Text}}\n{{- end -}}",
+          "ContentType": "{{- if index .global.task.input \"ContentType\" -}}\n  {{.global.task.input.ContentType}}\n{{- else -}}json{{- end -}}",
+          "Cookies": "{{- if index .global.task.input \"Cookies\" -}}\n  {{.global.task.input.Cookies | ToJson}}\n{{- end -}}",
+          "EndpointRequestType": "Internal",
+          "Headers": "{{- if index .global.task.input \"Headers\" -}}\n  {{.global.task.input.Headers | ToJson}}\n{{- end -}}",
+          "Method": "{{- if index .global.task.input \"Method\" -}}\n  {{.global.task.input.Method}}\n{{- else -}}GET{{- end -}}",
+          "Name": "GenericBatchApiTask",
+          "ObjectType": "workflow.WebApi",
+          "Outcomes": "{{- if index .global.task.input \"Outcomes\" -}}\n  {{.global.task.input.Outcomes | ToJson}}\n{{- end -}}",
+          "Protocol": "{{- if index .global.task.input \"Protocol\" -}}\n  {{.global.task.input.Protocol}}\n{{- else -}}https{{- end -}}",
+          "ResponseSpec": "{{- if index .global.task.input \"ResponseParser\" -}}\n  {{.global.task.input.ResponseParser | ToJson}}\n{{- end -}}",
+          "TargetType": "{{- if index .global.task.input \"Target\" -}}\n  Endpoint\n{{- else -}}Local{{- end -}}",
+          "Url": "{{.global.task.input.Url}}"
+        }
+      ],
+      "ClassId": "workflow.BatchApiExecutor",
+      "Constraints": {
+        "ObjectType": "workflow.TaskConstraints"
+      },
+      "Description": "Generic Batch API Task",
+      "Name": "GenericBatchApiTask",
+      "ObjectType": "workflow.BatchApiExecutor",
+      "Output": {
+        "Cookies": "{{- if index .global.GenericBatchApiTask.output \"HttpCookies\" -}}\n  {{.global.GenericBatchApiTask.output.HttpCookies | ToJson}}\n{{- end -}}",
+        "Headers": "{{- if index .global.GenericBatchApiTask.output \"HttpHeaders\" -}}\n  {{.global.GenericBatchApiTask.output.HttpHeaders | ToJson}}\n{{- end -}}",
+        "Parameters": "{{.global.GenericBatchApiTask.output | ToJson}}",
+        "StatusCode": "{{- if index .global.GenericBatchApiTask.output \"HttpStatusCode\" -}}\n  {{.global.GenericBatchApiTask.output.HttpStatusCode}}\n{{- end -}}",
+        "StatusMessage": "{{- if index .global.GenericBatchApiTask.output \"HttpStatusMsg\" -}}\n  {{.global.GenericBatchApiTask.output.HttpStatusMsg}}\n{{- end -}}"
+      },
+      "SharedScope": "shared",
+      "TaskDefinition": {
+        "ObjectType": "workflow.TaskDefinition",
+        "Selector": "Name eq \"InvokeGenericWebApi\" and Version eq 1"
+      }
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/BatchApiExecutors",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "Batch": [
+        {
+          "Body": "{\r\n  \"ins_api\": {\r\n    \"version\": \"1.0\",\r\n    \"type\": \"cli_conf\",\r\n    \"chunk\": \"0\",\r\n    \"sid\": \"sid\",\r\n    \"input\": \"no vlan {{.global.task.input.StartVLAN}}-{{.global.task.input.EndVLAN}}\",\r\n    \"output_format\": \"json\"\r\n  }\r\n}",
+          "ContentType": "json",
+          "Description": "Delete VLAN on Switch",
+          "EndpointRequestType": "Internal",
+          "Label": "Delete VLAN",
+          "Method": "POST",
+          "Name": "InvokeGenericWebApi1",
+          "ObjectType": "workflow.WebApi",
+          "Outcomes": [],
+          "ResponseSpec": {
+            "ErrorParameters": [],
+            "ObjectType": "content.Grammar",
+            "Parameters": [],
+            "Types": []
+          },
+          "TargetType": "Endpoint",
+          "Url": "/ins"
+        }
+      ],
+      "ClassId": "workflow.BatchApiExecutor",
+      "Constraints": {
+        "ObjectType": "workflow.TaskConstraints"
+      },
+      "Description": "Delete VLANs on Switch",
+      "Name": "Delete VLANs on Switch",
+      "ObjectType": "workflow.BatchApiExecutor",
+      "Output": {},
+      "SharedScope": "user",
+      "TaskDefinition": {
+        "ObjectType": "workflow.TaskDefinition",
+        "Selector": "Name eq \"DeleteVLANsonSwitch\" and Version eq 1"
+      }
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/BatchApiExecutors",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "Batch": [
+        {
+          "Body": "{\r\n  \"ins_api\": {\r\n    \"version\": \"1.0\",\r\n    \"type\": \"cli_conf\",\r\n    \"chunk\": \"0\",\r\n    \"sid\": \"sid\",\r\n    \"input\": \"vlan {{.global.task.input.StartVLAN}}-{{.global.task.input.EndVLAN}}\",\r\n    \"output_format\": \"json\"\r\n  }\r\n}",
+          "ContentType": "json",
+          "Description": "Create VLAN on Switch",
+          "EndpointRequestType": "Internal",
+          "Label": "Create VLAN",
+          "Method": "POST",
+          "Name": "InvokeGenericWebApi1",
+          "ObjectType": "workflow.WebApi",
+          "Outcomes": [],
+          "ResponseSpec": {
+            "ErrorParameters": [],
+            "ObjectType": "content.Grammar",
+            "Parameters": [],
+            "Types": []
+          },
+          "TargetType": "Endpoint",
+          "Url": "/ins"
+        },
+        {
+          "Body": "{\r\n  \"ins_api\": {\r\n    \"version\": \"1.0\",\r\n    \"type\": \"cli_show\",\r\n    \"chunk\": \"0\",\r\n    \"sid\": \"sid\",\r\n    \"input\": \"show vlan id {{.global.task.input.StartVLAN}}-{{.global.task.input.EndVLAN}} \",\r\n    \"output_format\": \"json\"\r\n  }\r\n}",
+          "ContentType": "json",
+          "Description": "VLANs Validation",
+          "EndpointRequestType": "Internal",
+          "Label": "VLANs Validation",
+          "Method": "POST",
+          "Name": "InvokeGenericWebApi2",
+          "ObjectType": "workflow.WebApi",
+          "Outcomes": [
+            {
+              "Condition": "{{eq (len .global.InvokeGenericWebApi2.output.created_vlans) 0 }}",
+              "Message": "VLAN  Creation Check Failed",
+              "Name": "VLAN Creation Check",
+              "Type": "Error"
+            },
+            {
+              "Condition": "{{ne (len .global.InvokeGenericWebApi2.output.active_vlans) (len .global.InvokeGenericWebApi2.output.created_vlans) }}",
+              "Message": "Active VLAN  Check Failed",
+              "Name": "Active VLAN Check",
+              "Type": "Error"
+            }
+          ],
+          "ResponseSpec": {
+            "ErrorParameters": [],
+            "ObjectType": "content.Grammar",
+            "Parameters": [
+              {
+                "AcceptSingleValue": false,
+                "ComplexType": "",
+                "ItemType": "simple",
+                "Name": "active_vlans",
+                "ObjectType": "content.Parameter",
+                "Path": "$..ROW_vlanbriefid[?(@[\"vlanshowbr-vlanstate\"]==\"active\")]",
+                "Secure": false,
+                "Type": "string"
+              },
+              {
+                "AcceptSingleValue": false,
+                "ComplexType": "",
+                "ItemType": "simple",
+                "Name": "created_vlans",
+                "ObjectType": "content.Parameter",
+                "Path": "$..ROW_vlanbriefid[:]",
+                "Secure": false,
+                "Type": "string"
+              }
+            ],
+            "Types": []
+          },
+          "TargetType": "Endpoint",
+          "Url": "/ins"
+        }
+      ],
+      "ClassId": "workflow.BatchApiExecutor",
+      "Constraints": {
+        "ObjectType": "workflow.TaskConstraints"
+      },
+      "Description": "Create VLANs on Switch",
+      "Name": "Create VLANs on Switch",
+      "ObjectType": "workflow.BatchApiExecutor",
+      "Output": {},
+      "SharedScope": "user",
+      "TaskDefinition": {
+        "ObjectType": "workflow.TaskDefinition",
+        "Selector": "Name eq \"CreateVLANsonSwitch\" and Version eq 1"
+      }
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/BatchApiExecutors",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "Batch": [
+        {
+          "Body": "{\r\n  \"ins_api\": {\r\n    \"version\": \"1.0\",\r\n    \"type\": \"cli_conf\",\r\n    \"chunk\": \"0\",\r\n    \"sid\": \"sid\",\r\n    \"input\": \"{{range $index, $node := .global.task.input.NTPServers}}no ntp server {{$node}} use-vrf default ;{{end}}\",\r\n    \"output_format\": \"json\"\r\n  }\r\n}",
+          "ContentType": "json",
+          "Description": "Remove NTP Servers From Switch",
+          "EndpointRequestType": "Internal",
+          "Label": "Remove NTP Servers From Switch",
+          "Method": "POST",
+          "Name": "InvokeGenericWebApi1",
+          "ObjectType": "workflow.WebApi",
+          "Outcomes": [],
+          "ResponseSpec": {
+            "ErrorParameters": [],
+            "ObjectType": "content.Grammar",
+            "Parameters": [],
+            "Types": []
+          },
+          "TargetType": "Endpoint",
+          "Url": "/ins"
+        }
+      ],
+      "ClassId": "workflow.BatchApiExecutor",
+      "Constraints": {
+        "ObjectType": "workflow.TaskConstraints"
+      },
+      "Description": "Remove NTP Servers from Switch",
+      "Name": "Remove NTP Servers From Switch",
+      "ObjectType": "workflow.BatchApiExecutor",
+      "Output": {},
+      "SharedScope": "user",
+      "TaskDefinition": {
+        "ObjectType": "workflow.TaskDefinition",
+        "Selector": "Name eq \"RemoveNTPServersFromSwitch\" and Version eq 1"
+      }
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/BatchApiExecutors",
+    "Verb": "POST"
+  },
+  {
+    "Body": {
+      "Batch": [
+        {
+          "Body": "{\r\n  \"ins_api\": {\r\n    \"version\": \"1.0\",\r\n    \"type\": \"cli_conf\",\r\n    \"chunk\": \"0\",\r\n    \"sid\": \"sid\",\r\n    \"input\": \"{{range $index, $node := .global.task.input.NTPServers}}ntp server {{$node}} use-vrf default ;{{end}}\",\r\n    \"output_format\": \"json\"\r\n  }\r\n}",
+          "ContentType": "json",
+          "Description": "Add NTP Servers to Switch",
+          "EndpointRequestType": "Internal",
+          "Label": "Add NTP Servers to Switch",
+          "Method": "POST",
+          "Name": "InvokeGenericWebApi1",
+          "ObjectType": "workflow.WebApi",
+          "Outcomes": [],
+          "ResponseSpec": {
+            "ErrorParameters": [],
+            "ObjectType": "content.Grammar",
+            "Parameters": [],
+            "Types": []
+          },
+          "TargetType": "Endpoint",
+          "Url": "/ins"
+        },
+        {
+          "Body": "{\r\n  \"ins_api\": {\r\n    \"version\": \"1.0\",\r\n    \"type\": \"cli_show\",\r\n    \"chunk\": \"0\",\r\n    \"sid\": \"sid\",\r\n    \"input\": \"show ntp peers \",\r\n    \"output_format\": \"json\"\r\n  }\r\n}",
+          "ContentType": "json",
+          "Description": "Get NTP Configuration",
+          "EndpointRequestType": "Internal",
+          "Label": "Validate NTP Config",
+          "Method": "POST",
+          "Name": "InvokeGenericWebApi2",
+          "ObjectType": "workflow.WebApi",
+          "Outcomes": [
+            {
+              "Condition": "{{ $error := false }}{{range $index, $node := .global.task.input.NTPServers }}{{if not (LookupInSlice $.global.InvokeGenericWebApi2.output.ntp_servers $node)}}{{$error = true}}{{end}}{{end}}{{if $error}}true{{end}}",
+              "Message": "NTP Server Configuration Check Failed",
+              "Name": "NTP Server Check",
+              "Type": "Error"
+            }
+          ],
+          "ResponseSpec": {
+            "ErrorParameters": [],
+            "ObjectType": "content.Grammar",
+            "Parameters": [
+              {
+                "AcceptSingleValue": false,
+                "ComplexType": "",
+                "ItemType": "simple",
+                "Name": "ntp_servers",
+                "ObjectType": "content.Parameter",
+                "Path": "$..ROW_peers[?(@.serv_peer==\"Server\")].PeerIPAddress",
+                "Secure": false,
+                "Type": "json"
+              }
+            ],
+            "Types": []
+          },
+          "TargetType": "Endpoint",
+          "Url": "/ins"
+        }
+      ],
+      "ClassId": "workflow.BatchApiExecutor",
+      "Constraints": {
+        "ObjectType": "workflow.TaskConstraints"
+      },
+      "Description": "Add NTP Servers to Switch",
+      "Name": "Add NTP Servers to Switch",
+      "ObjectType": "workflow.BatchApiExecutor",
+      "Output": {
+        "ConfiguredNTPServers": "{{.global.InvokeGenericWebApi2.output.ntp_servers}}"
+      },
+      "SharedScope": "user",
+      "TaskDefinition": {
+        "ObjectType": "workflow.TaskDefinition",
+        "Selector": "Name eq \"AddNTPServerstoSwitch\" and Version eq 1"
+      }
+    },
+    "ClassId": "bulk.RestSubRequest",
+    "ObjectType": "bulk.RestSubRequest",
+    "TargetMoid": "",
+    "Uri": "/v1/workflow/BatchApiExecutors",
+    "Verb": "POST"
+  }
+]
