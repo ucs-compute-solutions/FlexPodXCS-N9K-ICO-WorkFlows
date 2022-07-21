@@ -1,11 +1,11 @@
 # Intersight Orchestrator work-flow for configuring N9K devices for FlexPod
 
-This repository contains canned Intersight Cloud Orchestrator work-flow for configuring a pair of N9K ethernet switching devices required for FlexPod reference architeture implementation. Its expected to have physical connections, required hardware model and NXOS versions have already been setup based on FlexPod latest CVD reccomendations. Also these N9K devices have been claimed to your Intersight account using on-prem Intersight Assist running on your on-prem.
+This repository contains canned Intersight Cloud Orchestrator work-flow for configuring a pair of N9K ethernet switching devices required for FlexPod reference architeture implementation. Its expected to have physical connections, required hardware model, NXOS versions, NxAPI feature enabled and have already been physically connected based on FlexPod latest CVD reccomendations. Also these N9K devices have been claimed to your Intersight account using on-prem Intersight Assist running on your on-prem.
 More details can be found out in this FlexPodXCS white papter - 
 
 https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/flexpod-xcs-solution-with-intersight-wp.html
 
-Once the N9K devices are successfully claimed to the Intersight account, uber work-flow can be imported using Import feature in Orchestration menu. Intersight account must have premier license installed in order to enable Intersight Cloud Orchestrator feature set. Importing uber work-flow alone, imports all sub-workflows, custom tasks, config tasks, parallel loop tasks, conditional tasks and validation tasks all together. There is no other requirement needed to run the work-flow except giving required inputs during the work-flow execution. 
+Once the N9K devices with NxAPI feature enabled on them and are successfully claimed to the Intersight account, uber work-flow can be imported using Import feature in Orchestration menu. Intersight account must have premier license installed in order to enable Intersight Cloud Orchestrator feature set. Importing uber work-flow alone, imports all sub-workflows, custom tasks, config tasks, parallel loop tasks, conditional tasks and validation tasks all together. There is no other requirement needed to run the work-flow except giving required inputs during the work-flow execution. 
 
 <img width="1511" alt="Screen Shot 2022-05-04 at 4 20 16 PM" src="https://user-images.githubusercontent.com/12057795/166840700-5e0344bf-ca77-4fd7-9271-711e31042867.png">
 
