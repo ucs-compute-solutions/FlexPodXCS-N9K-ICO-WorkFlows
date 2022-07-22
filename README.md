@@ -1,3 +1,4 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/ucs-compute-solutions/FlexPodXCS-N9K-ICO-WorkFlows)
 # Intersight Orchestrator work-flow for configuring N9K devices for FlexPod
 
 This repository contains canned Intersight Cloud Orchestrator work-flow for configuring a pair of N9K ethernet switching devices required for FlexPod reference architeture implementation. Its expected to have physical connections, required hardware model, NXOS versions, NxAPI feature enabled and have already been physically connected based on FlexPod latest CVD reccomendations. Also these N9K devices have been claimed to your Intersight account using on-prem Intersight Assist running on your on-prem.
